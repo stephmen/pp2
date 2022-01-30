@@ -1,0 +1,49 @@
+const array1 = [1, 2, 3, 4];
+const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
+
+// 5 + 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer, 5));
+// expected output: 15
+
+
+const projets = props.articles.reduce((c, v) => {
+    c[v.projet[0].title] = c[v.projet[0].title] || [];       //Initiate if key does not exist
+    c[v.projet[0].title].push(v);
+    return c;
+  }, {});
+
+  console.log("Projet",projets)
+
+
+
+Projet {
+  'Nacelles Pourpour': [
+    {
+      _id: '8253a221-936b-4ddc-a46b-fba971b100c2',
+      projet: [Array],
+      publishedAt: '2018-10-28T19:15:00.000Z',
+      slug: [Object],
+      title: 'PourPour Spectacle'
+    },
+    {
+      _id: 'cfcca096-f6a0-4e4f-baf1-6fd25d559a92',
+      projet: [Array],
+      publishedAt: '2018-09-30T19:00:00.000Z',
+      slug: [Object],
+      title: 'Communiqué de Presse'
+    }
+  ],
+  'Carnaval des 2 Rives': [
+    {
+      _id: '95172246-1fb5-47eb-8611-cf60ce94c6a9',
+      projet: [Array],
+      publishedAt: '2008-09-16T13:57:00.000Z',
+      slug: [Object],
+      title: 'Bordeaux'
+    }
+  ]
+}
