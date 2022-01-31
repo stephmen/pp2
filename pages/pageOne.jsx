@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 //import Footer from '../components/Footer'
+import Image from "next/image"
 import { ThemeProvider } from 'styled-components';
 import { theme } from '.././styles/theme';
 import { PourPourLogo } from '../Components';
@@ -21,7 +22,7 @@ const PageOne = (props) => {
     <PourPourLogo className="logo" size="100%"/>
     <LesAmis className="lesAmis" size="200%"/>
     </div>
-    <img className="photo" src="PlacedesArtsPP1.jpg" />
+    <img className="photo" src="/PlacedesArtsPP1.jpg"/>
     </MainPage>
     )
     

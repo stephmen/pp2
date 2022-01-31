@@ -14,7 +14,7 @@ const MainPage = styled.div`
 .lesAmis{
 
 }
-.photo{
+#photo{
 margin-right: 0;
 position: fixed;
 bottom: 3rem;

@@ -22,10 +22,10 @@ const Post = (props) => {
   return (
     <ShowStyle>
     
-      <h1 class="title">{title}  {new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h1>
-      {/* <h2 class="adress">{nocivique} {rue} {ville}</h2> */}
+      <h1 className="title">{title}  {new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h1>
+      {/* <h2 className="adress">{nocivique} {rue} {ville}</h2> */}
       <img src={urlFor(mainImage).width(550).url()}/>
-      <div class="block">
+      <div className="block">
       <BlockContent 
         blocks={body}
         imageOptions={{ w: 320, h: 240, fit: 'max' }}

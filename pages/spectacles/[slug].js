@@ -1,6 +1,7 @@
 // [slug].js
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
+import Image from 'next/image'
 import BlockContent from '@sanity/block-content-to-react'
 import sanityClient from '../../client'
 import { ShowStyle } from '../../components/Styled-Component/spectacle.styled'
@@ -24,11 +25,11 @@ const Post = (props) => {
   return (
     <ShowStyle>
     
-      <h1 class="title">{title}  {new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h1>
+      <h1 className="title">{title}  {new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h1>
       {/* <h2>Addresse:</h2> */}
-      <h2 class="adress">{nocivique} {rue} {ville}</h2>
-      <img src={urlFor(mainImage).width(550).url()}/>
-      <div class="block">
+      <h2 className="adress">{nocivique} {rue} {ville}</h2>
+      <Image src={urlFor(mainImage).width(550).url()}/>
+      <div className="block">
       <BlockContent 
         blocks={body}
         imageOptions={{ w: 320, h: 240, fit: 'max' }}

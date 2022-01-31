@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   StyledDisques,
   SyledTitle,
@@ -16,11 +17,11 @@ const Disques = (props) => {
     <Container>
       <SyledTitle> Nos Albums</SyledTitle>
       <StyledDisques>
-        <img className="cd" src="pourtoutlemondedame.jpg" />
-        <img className="cd" src="lapourpour.jpg" />
-        <img className="cd" src="Danse des Breloques.jpg" />
-        <img className="cd" src="Karussel.jpg" />
-        <img className="cd" src="Le Bal.jpg" />
+        <Image className="cd" src="/pourtoutlemondedame.jpg" />
+        <Image className="cd" src="/lapourpour.jpg" />
+        <Image className="cd" src="/Danse des Breloques.jpg" />
+        <Image className="cd" src="/Karussel.jpg" />
+        <Image className="cd" src="/Le Bal.jpg" />
       </StyledDisques>
 
       <BuyingCD>
@@ -33,17 +34,17 @@ const Disques = (props) => {
       <Boutiques>
         <div>
           <Link href="https://actuellecd.com/fr/artiste/fanfarepourpour_/Fanfare_Pourpour">
-            <img className="Dame" src="actuellelogo.png" />
+            <Image className="Dame" src="/actuellelogo.png" />
           </Link>
         </div>
         <div>
           <Link href="https://www.facebook.com/Boutiqueloblique/">
-            <img className="Apple" src="Oblique.jpg" />
+            <Image className="Apple" src="/Oblique.jpg" />
           </Link>
         </div>
         <div>
           <Link href="https://music.apple.com/ca/artist/fanfare-pourpour/419642215">
-            <img className="Apple" src="Apple_logo_black.svg.png" />
+            <Image className="Apple" src="/Apple_logo_black.svg.png" />
           </Link>
         </div>
       </Boutiques>

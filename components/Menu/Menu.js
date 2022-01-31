@@ -8,34 +8,34 @@ const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
       <Link href="/spectacles">
-      <a href="/" onClick={() => setOpen(!open)}>
+      <Link href="/spectacles" onClick={() => setOpen(!open)}>
         Spectacles
-      </a>
+      </Link>
       </Link>
       <Link href="/disques">
-      <a href="/" onClick={() => setOpen(!open)}>
+      <Link href="/" onClick={() => setOpen(!open)}>
         Disques
-        </a>
+        </Link>
       </Link>
         <Link href="/photos">
-      <a href="/" onClick={() => setOpen(!open)}>
+      <Link href="/" onClick={() => setOpen(!open)}>
         Photos
-        </a>
+        </Link>
         </Link>
       <Link href="/histoire">
-      <a href="/" onClick={() => setOpen(!open)}>
+      <Link href="/" onClick={() => setOpen(!open)}>
         Histoire
-      </a>
+      </Link>
       </Link>
       <Link href="/presse">
-      <a href="/" onClick={() => setOpen(!open)}>
+      <Link href="/" onClick={() => setOpen(!open)}>
         Presse
-        </a>
+        </Link>
       </Link>
       {/* <Link href="/articles-archives">
-      <a href="/" onClick={() => setOpen(!open)}>
+      <Link href="/" onClick={() => setOpen(!open)}>
         Projets/Archives
-      </a>
+      </Link>
       </Link> */}
     </StyledMenu>
   )

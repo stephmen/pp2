@@ -16,7 +16,7 @@ const Calendar = (props) => {
     <CalendarStyle>
     
     <h1 className="titre" >Nos prochains spectacles:</h1>
-    <h4 className="info">Pour plus d'informations cliquez sur les dates</h4>
+    <h4 className="info">Pour plus d&apos;informations cliquez sur les dates</h4>
     <div className="spectacle">
     {props.posts.map(
       ({ _id, title = '', slug = '', publishedAt

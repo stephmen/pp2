@@ -5,7 +5,7 @@ export default function Amis (props) {
 
 return(  
 <LesAmis {...props}>
-<img className="logo" src="lesamistransparent.png" />
+<img className="logo" src="/lesamistransparent.png" />
 </LesAmis>
 )
 }

@@ -1,6 +1,7 @@
 //https://www.npmjs.com/package/react-flickr-lightbox
 
 import React from 'react';
+import Image from 'next/image'
 import FlickrLightbox from 'react-flickr-lightbox';
 import styled from 'styled-components';
 
@@ -33,7 +34,7 @@ export default function Photo() {
         <PhotoStyle>
         <FlickrLightbox className="flickr" api_key='f4e750e492da5ecc812fe2a8a5a19e8c' user_id='dmar_qc' searchTerm='FanfarePourpour' limit={20}  />
         <FlickrLightbox className="flickr" api_key='f4e750e492da5ecc812fe2a8a5a19e8c'  searchTerm='Pourpour'   />
-        <img className="preLoad" src="preloader.gif"></img>
+        <Image className="preLoad" src="preloader.gif"></Image>
         </PhotoStyle>
 
     )

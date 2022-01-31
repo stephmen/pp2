@@ -68,7 +68,7 @@ const ArticlesArchives = (props) => {
               </div>
             </div>
         ))}
-         <img className="cd" src="lesamistransparent.png" /> 
+         <img className="cd" src="/lesamistransparent.png" /> 
       </div>
     </ArticlesArchivesStyles>
   );
