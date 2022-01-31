@@ -1,9 +1,9 @@
 import React, {useState, useRef} from 'react'
-import { GlobalStyles } from '.././global';
 import { ThemeProvider } from 'styled-components';
+import { Header, Footer } from '../components/';
+import { GlobalStyles } from '.././global';
 import { theme } from '../styles/theme';
 import { useOnClickOutside } from '../hooks'
-import { Header, Footer } from '../components';
 
 const  MyApp = ({ Component, pageProps }) => {
   
