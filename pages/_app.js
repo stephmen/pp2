@@ -5,12 +5,11 @@ import { theme } from '../styles/theme';
 import { useOnClickOutside } from '../hooks'
 import { Header, Footer } from '../components';
 
-function MyApp({ Component, pageProps }) {
+const  MyApp = ({ Component, pageProps }) => {
   
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
-
   useOnClickOutside(node, () => setOpen(false));
   
   return( 

@@ -13,8 +13,8 @@ const PageOne = (props) => {
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
-
   useOnClickOutside(node, () => setOpen(false));
+  return (
     <MainPage>
     <div className="logoetamis">
     <PourPourLogo className="logo" size="100%"/>
@@ -22,6 +22,7 @@ const PageOne = (props) => {
     </div>
     <img className="photo" src="/PlacedesArtsPP1.jpg"/>
     </MainPage>
+  )
 }
 
 export default PageOne
