@@ -3,8 +3,8 @@ import React, { useState, useRef } from "react";
 import Image from "next/image"
 import { ThemeProvider } from 'styled-components';
 import { theme } from '.././styles/theme';
-import { PourPourLogo } from '../Components';
-import { LesAmis } from '../Components';
+import { PourPourLogo } from '../components';
+import { LesAmis } from '../components';
 import MainPage from '../components/Styled-Component/pageone.styled'
 import { useOnClickOutside } from '../hooks';
 
@@ -16,7 +16,6 @@ const PageOne = (props) => {
 
   useOnClickOutside(node, () => setOpen(false));
 
-    return(
     <MainPage>
     <div className="logoetamis">
     <PourPourLogo className="logo" size="100%"/>
