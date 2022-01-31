@@ -3,7 +3,7 @@ import { GlobalStyles } from '.././global';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
 import { useOnClickOutside } from '../hooks'
-import { Footer, Header } from '../Components';
+import { Footer, Header } from '../components';
 
 function MyApp({ Component, pageProps }) {
   
