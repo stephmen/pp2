@@ -13,22 +13,22 @@ const Menu = ({ open, setOpen }) => {
       </Link>
       </Link>
       <Link href="/disques">
-      <Link href="/" onClick={() => setOpen(!open)}>
+      <Link href="/disques" onClick={() => setOpen(!open)}>
         Disques
         </Link>
       </Link>
         <Link href="/photos">
-      <Link href="/" onClick={() => setOpen(!open)}>
+      <Link href="/photos" onClick={() => setOpen(!open)}>
         Photos
         </Link>
         </Link>
       <Link href="/histoire">
-      <Link href="/" onClick={() => setOpen(!open)}>
+      <Link href="/histoire" onClick={() => setOpen(!open)}>
         Histoire
       </Link>
       </Link>
       <Link href="/presse">
-      <Link href="/" onClick={() => setOpen(!open)}>
+      <Link href="/presse" onClick={() => setOpen(!open)}>
         Presse
         </Link>
       </Link>
