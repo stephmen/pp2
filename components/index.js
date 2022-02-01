@@ -1,4 +1,3 @@
-
 export { default as Burger } from './Burger';
 export { default as Menu } from './Menu'
 export { default as Calendar } from './Calendar';
@@ -11,8 +10,6 @@ export { default as Disques } from './Disques';
 export { default as Histoire } from './Histoire';
 export { default as MainPage } from './PourPourLogo';
 export { default as LesAmis } from './LesAmis';
-// export { default as ArticlesArchives } from './ArticlesArchives';
-// export { default as History } from './History';
-// 
+
  
 
