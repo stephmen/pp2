@@ -1,8 +1,4 @@
 import React, { useState, useRef } from "react";
-//import Footer from '../components/Footer'
-import Image from "next/image"
-import { ThemeProvider } from 'styled-components';
-import { theme } from '.././styles/theme';
 import { PourPourLogo } from '../components';
 import { LesAmis } from '../components';
 import MainPage from '../components/Styled-Component/pageone.styled'

@@ -1,6 +1,7 @@
 import React, {useState, useRef} from 'react'
 import { ThemeProvider } from 'styled-components';
-import { Header, Footer } from '../components/';
+// import { ThemeProvider } from 'styled-components';
+import { Header, Footer } from '../components';
 import { GlobalStyles } from '.././global';
 import { theme } from '../styles/theme';
 import { useOnClickOutside } from '../hooks'
