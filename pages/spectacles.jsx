@@ -4,7 +4,7 @@ import sanityClient from '../client'
 import groq from 'groq'
 import { ThemeProvider } from 'styled-components';
 import { theme } from '.././styles/theme';
-import { PourPourLogo, Calendar } from '../Components';
+import { PourPourLogo, Calendar } from '../components';
 import { Main } from '../components/Styled-Component/spectacle.styled'
 import { useOnClickOutside } from '../hooks';
 

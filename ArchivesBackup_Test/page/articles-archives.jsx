@@ -3,7 +3,7 @@ import Link from 'next/link'
 import sanityClient from '../client'
 import groq from 'groq'
 
-import { PourPourLogo, ArticlesArchives } from '../Components';
+import { PourPourLogo, ArticlesArchives } from '../components';
 import { Main } from '../components/Styled-Component/spectacle.styled'
 import { useOnClickOutside } from '../hooks';
 
