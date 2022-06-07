@@ -19,22 +19,6 @@ const Calendar = (props) => {
     {/* <h4 className="info">Pour plus d&apos;informations cliquez sur les dates</h4> */}
     <div className="spectacle">
     {props.posts.map(
-<<<<<<< HEAD
-      ({ _id, title = '', slug = '', publishedAt
-      = '', nocivique, rue, ville }) =>
-      slug && (
-        <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
-        <li key={_id}> 
-
-        <span> {title} </span>
-        <br/>
-        <span> {new Date(publishedAt).toLocaleDateString('fr-FR',options)} </span>
-        
-        <br/>
-        <span> {ville} {nocivique} {rue} </span>
-        </li> 
-
-=======
       ({ _id, title = '', slug = '', publishedAt, endroit
       = '' }) =>
       slug && (
@@ -45,7 +29,6 @@ const Calendar = (props) => {
         <br/>
         <span> {endroit} </span> 
         </li>
->>>>>>> 8c835c449b6773cc55a9f6e14252ec086588a783
         </Link>
         ))}
     </div>
