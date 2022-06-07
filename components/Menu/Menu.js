@@ -17,11 +17,11 @@ const Menu = ({ open, setOpen }) => {
         Disques
         </Link>
       </Link>
-        <Link href="/photos">
+      {/* <Link href="/photos">
       <Link href="/photos" onClick={() => setOpen(!open)}>
         Photos
         </Link>
-        </Link>
+        </Link> */}
       <Link href="/histoire">
       <Link href="/histoire" onClick={() => setOpen(!open)}>
         Histoire

@@ -13,6 +13,11 @@ grid-gap: 20px;
     align-self: end;
     grid-area: 3 / 1 /  4 / 4;
 }
+.date {
+    flex-direction: column;
+    align-self: end;
+    grid-area: 3 / 3 /  4 / 4;
+}
 img{
     grid-area: 4 / 1 /  4 / 4;
 }

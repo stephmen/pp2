@@ -26,8 +26,7 @@ const Post = (props) => {
     <ShowStyle>
     
       <h1 className="title">{title}  </h1>
-      
-      <h1 >{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h1>
+      <h1 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h1>
       {/* <h2>Addresse:</h2> */}
       <h2 className="adress">{nocivique} {rue} {ville}</h2>
       <img src={urlFor(mainImage).width(550).url()}/>

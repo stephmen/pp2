@@ -32,7 +32,7 @@ align-items: center;
 }
 
 .spectacle {
-    grid-area: 2 / 2 / 4 / 4;
+    grid-area: 2 / 1 / 4 / 4;
     font-size: larger;
     font-weight: bold;
     li:hover {
