@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   name: 'spectacle',
   title: 'Spectacle',
@@ -22,6 +23,11 @@ export default {
       name: 'publishedAt',
       title: 'Date du Spectacle',
       type: 'datetime',
+    },
+    {
+      name: 'endroit',
+      title: 'Endroit ou se déroule le spectacle',
+      type: 'string'
     },
     {
       name: 'nocivique',

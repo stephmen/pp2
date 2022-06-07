@@ -19,11 +19,16 @@ const Calendar = (props) => {
     <h4 className="info">Pour plus d&apos;informations cliquez sur les dates</h4>
     <div className="spectacle">
     {props.posts.map(
-      ({ _id, title = '', slug = '', publishedAt
+      ({ _id, title = '', slug = '', publishedAt, endroit
       = '' }) =>
       slug && (
         <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
-        <li key={_id}> {new Date(publishedAt).toLocaleDateString('fr-FR',options)} <br/><span> {title} </span></li>   
+        <li key={_id}> {new Date(publishedAt).toLocaleDateString('fr-FR',options)} 
+        <br/>
+        <span> {title} </span>
+        <br/>
+        <span> {endroit} </span> 
+        </li>
         </Link>
         ))}
     </div>
