@@ -3,7 +3,7 @@ import styled from  'styled-components'
 export const StyledPress = styled.div`
 
 .container{
-    margin: 8rem 8rem;
+    margin: 8rem 22rem;
 }
 .commentaire{
     /* padding-top: 2rem; */
@@ -21,7 +21,7 @@ export const StyledPress = styled.div`
   font-style: italic;
 }
 .c1 {
-  margin: 30px 60px;
+  margin: 10px 30px;
   padding-top: 10pt;
   padding-bottom: 0pt;
   line-height: 1.15;

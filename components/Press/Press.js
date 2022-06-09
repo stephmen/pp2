@@ -61,7 +61,7 @@ export default function Presse() {
             </span>
             <br />
             <br />
-            <br />
+            
 
             
               Patrick Duval, directeur de Musiques de Nuit,
@@ -79,7 +79,6 @@ export default function Presse() {
             <span className="c0">
               «The most enjoyful music I&apos;ve heard in a long time.»
             </span>
-            <br/>
             <br/>
             <br/>
             Georges Harrison, avril 2000
