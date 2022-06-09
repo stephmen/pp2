@@ -19,24 +19,27 @@ const Post = (props) => {
     publishedAt,
     nocivique,
     rue,
-    ville
+    ville,
+    endroit,
   } = {...props}
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return (
     <ShowStyle>
     
       <h1 className="title">{title}  </h1>
-      <h1 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h1>
-      {/* <h2>Addresse:</h2> */}
+      <h2 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h2>
+      <h2 className="endroit">{endroit}  </h2>
+
       <h2 className="adress">{nocivique} {rue} {ville}</h2>
       <img src={urlFor(mainImage).width(550).url()}/>
-      <div className="block">
+      {/* <div className="block"> */}
       <BlockContent 
+        className="block"
         blocks={body}
-        imageOptions={{ w: 320, h: 240, fit: 'max' }}
+        // imageOptions={{ w: 320, h: 240, fit: 'max' }}
         {...client.config()}
       />
-      </div>
+      {/* </div> */}
     </ShowStyle>
   )
 }

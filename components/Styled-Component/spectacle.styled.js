@@ -1,38 +1,40 @@
 import styled from 'styled-components';
 export const ShowStyle = styled.div`
-width: 960px;
-padding: 4rem;
+width: 660px;
+
 margin: auto;
 display: grid;
-grid-gap: 20px;
+grid-gap: 0px;
+/* grid: 4rem / auto / auto / auto */
+
+
+
 .title{
-    grid-area: 1 / 1 /  3 / 6;
+    padding-top: 5rem;
+    grid-area: 1 / 1 ;
+}
+.endroit{
+    grid-area: 2 /1
 }
 .adress{  
     flex-direction: column;
     align-self: end;
-    grid-area: 3 / 1 /  4 / 4;
+    grid-area: 4 / 1 ;
 }
 .date {
     flex-direction: column;
     align-self: end;
-    grid-area: 3 / 3 /  4 / 4;
+    grid-area:  3 / 1 / auto / auto  ;
 }
 img{
-    grid-area: 4 / 1 /  4 / 4;
+    grid-area: 6 / 1 ;
 }
 .block{   
-    grid-row-start: 4;
-    grid-column-start: 4; 
-    grid-column-end: 7;
+    grid-areas: 5 / 2 ;
 }
 `
 export const Main = styled.div`
 
-width: 960px;
-padding: 8rem;
-margin: auto;
-display: grid;
-grid-gap: 20px;
+
 
 `
