@@ -19,15 +19,6 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
   }
-  .photo{
-
-margin-right: 0;
-position: fixed;
-bottom: 3rem;
-width: 100%;
-max-width: 100%;
-max-height: auto;
-
 
 
 }

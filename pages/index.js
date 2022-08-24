@@ -7,7 +7,7 @@ export default function Home() {
     <div >
       <Head>
         <title>Fanfare PourPour</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <PageOne />      
     </div>

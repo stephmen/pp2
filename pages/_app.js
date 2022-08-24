@@ -1,6 +1,5 @@
 import React, {useState, useRef} from 'react'
 import { ThemeProvider } from 'styled-components';
-// import { ThemeProvider } from 'styled-components';
 import { Header, Footer } from '../components';
 import { GlobalStyles } from '.././global';
 import { theme } from '../styles/theme';
@@ -17,10 +16,7 @@ const  MyApp = ({ Component, pageProps }) => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header open="open" />
-      <div>
-        <Component {...pageProps} />
-      </div>
-      
+      <Component {...pageProps } /> 
       <Footer />
     </ThemeProvider>
     )

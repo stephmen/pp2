@@ -1,20 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 
-
-const MainPage = styled.div`
-.logoetamis{
-    display: flex;
-    align-content: center;
-    align-items: center;
+export const MainPage = styled.div`
+display: flex
+flex-direction: row
+justify-content: space-between
+align-content: flex-end
+ .logo{
 }
-.logo{
-   
-}
-.lesAmis{
-
-}
-#photo{
+.photo{
 margin-right: 0;
 position: fixed;
 bottom: 3rem;
@@ -23,4 +17,4 @@ max-width: 100%;
 max-height: auto;
 }
 `
-export default MainPage
+// export default MainPage
