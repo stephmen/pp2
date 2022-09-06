@@ -14,25 +14,36 @@ const Calendar = (props) => {
   
   return(
     <CalendarStyle>
+    <div className='container'>
+    <header>
+    <div className="col">
+      <h3>Date</h3></div>
+    <div className="col"><h3>Évènement</h3></div>
+    <div className="col"><h3> Lieu</h3></div>
+    <div className="col"><h3>Info</h3></div>
+    </header>
     
-    <h1 className="titre" >Nos prochains spectacles:</h1>
-    {/* <h4 className="info">Pour plus d&apos;informations cliquez sur les dates</h4> */}
-    <div className="spectacle">
+    
+    
+    
     {props.posts.map(
       ({ _id, title = '', slug = '', publishedAt, endroit
       = '' }) =>
       slug && (
+        <div className='row'>
+        
+        <div  className="col"> {new Date(publishedAt).toLocaleDateString('fr-FR',options)} 
+        </div>
+        <div className="col"> {title} </div>      
+        <div className="col"> {endroit} </div>
+        <div className="col">
         <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
-        <li key={_id}> {new Date(publishedAt).toLocaleDateString('fr-FR',options)} 
-        <br/>
-        <span> {title} </span>
-        <br/>
-        <span> {endroit} </span> 
-        </li>
+        <img src="/LesAmisCrop/sue3.png"  height="50"/>
         </Link>
+        </div>
+        </div>
         ))}
-    </div>
-    <div className="info">
+    
     </div>
     </CalendarStyle>
     )
