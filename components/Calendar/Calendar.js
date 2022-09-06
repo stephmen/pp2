@@ -26,6 +26,20 @@ const Calendar = (props) => {
     
     
     
+<<<<<<< HEAD
+=======
+    <header>
+    <div className="col">
+      <h3>Date</h3></div>
+    <div className="col"><h3>Évènement</h3></div>
+    <div className="col"><h3> Lieu</h3></div>
+    <div className="col"><h3>Info</h3></div>
+    </header>
+    
+    
+    
+    
+>>>>>>> 53375ec5a8c767015161139f4f91da552c2a303d
     {props.posts.map(
       ({ _id, title = '', slug = '', publishedAt, endroit
       = '' }) =>
@@ -38,13 +52,21 @@ const Calendar = (props) => {
         <div className="col"> {endroit} </div>
         <div className="col">
         <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
+<<<<<<< HEAD
         <img src="/LesAmisCrop/sue3.png"  height="50"/>
+=======
+        Info
+>>>>>>> 53375ec5a8c767015161139f4f91da552c2a303d
         </Link>
         </div>
         </div>
         ))}
     
+<<<<<<< HEAD
     </div>
+=======
+   
+>>>>>>> 53375ec5a8c767015161139f4f91da552c2a303d
     </CalendarStyle>
     )
     
