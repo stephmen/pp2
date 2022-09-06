@@ -13,7 +13,7 @@ const PageOne = (props) => {
   return (
     <MainPage>
     <div>
-    <PourPourLogo className="logo" size="100%" margin="6rem auto"/>
+    <PourPourLogo className="logo" size="70rem" margin="6rem auto"/>
     <PPPhoto className="photo" src="/PlacedesArtsPP1.jpg"/>
     </div>
     </MainPage>
