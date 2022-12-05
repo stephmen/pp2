@@ -6,7 +6,7 @@ export const LesAmis = styled.div`
 background-color: "#b3cad6";
 .logo{
     /* border: 3px dashed blue; */
-    /* margin: 4rem auto; */
+    margin-top: 6rem; 
     width: ${props => props.size ? props.size : "75%"};
     
 

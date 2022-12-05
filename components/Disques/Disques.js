@@ -27,7 +27,7 @@ const Disques = (props) => {
       <BuyingCD>
         <p>
           <h1>
-            Vous pourvez vous procurez nos albums aux boutiques suivantes:
+            Vous pourvez vous procurez nos albums aux endroits suivants:
           </h1>
         </p>
       </BuyingCD>

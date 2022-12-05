@@ -21,5 +21,5 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 
-}
+
 `

@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 export const CalendarStyle = styled.div`
-<<<<<<< HEAD
+// <<<<<<< HEAD
 
 .container {
   margin: 6rem 4rem;
-  background-color: blue;
+  background-color: #F9F871;
   
 }
 
 header, .row, .col {
   border: 1px solid;
   border-top: 0;
-
   display: flex;
   justify-content: center
    
@@ -25,22 +24,17 @@ header {
 }
 .row {
   border-bottom: 0px solid
-=======
+
     
-header, .row, col { 
-  show-grid: true
-}
+
 header, .row {
   margin:  4rem ;
   display: flex;
    
 }
-header {
-  margin: 10px, , 10px 
-}
-.col {
-  flex: 1
->>>>>>> 53375ec5a8c767015161139f4f91da552c2a303d
+
+
+
 }
 
 
