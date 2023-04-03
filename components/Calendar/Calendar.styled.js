@@ -9,7 +9,7 @@ export const CalendarStyle = styled.div`
 }
 
 header, .row, .col {
-  border: 1px solid;
+  border: 0px solid;
   border-top: 0;
   display: flex;
   justify-content: center
@@ -25,17 +25,13 @@ header {
 .row {
   border-bottom: 0px solid
 
-    
-
-header, .row {
-  margin:  4rem ;
-  display: flex;
-   
-}
+}   
 
 
 
-}
+
+
+
 
 
 
