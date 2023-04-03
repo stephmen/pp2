@@ -23,7 +23,7 @@ export const Titre = styled.h1`
    
 // `
 export const Main = styled.div`
-margin: 10rem;
+margin: 40rem;
 display: flex;
 flex-direction: column;
 
