@@ -43,7 +43,7 @@ const Calendar = (props) => {
         <div className="col"> {endroit} </div>
         <div className="col">
         <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
-        <img src="/LesAmisCrop/sue3.png"  height="50"/>
+        <img src="/LesAmisCrop/sue3.png"  height="50" className="rotate-img"/>
         </Link>
         </div>
         </div>
