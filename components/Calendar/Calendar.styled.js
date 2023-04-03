@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const CalendarStyle = styled.div`
-
+// <<<<<<< HEAD
 
 .container {
   margin: 6rem 4rem;
@@ -25,10 +25,9 @@ header {
 .row {
   border-bottom: 0px solid
 
-}
+    
 
-header, 
-.row {
+header, .row {
   margin:  4rem ;
   display: flex;
    
@@ -36,7 +35,7 @@ header,
 
 
 
-
+}
 
 
 
