@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    name: 'presse',
-    title: 'Presse',
+    name: 'galleryPhoto',
+    title: 'galleryPhoto',
     type: 'document',
     fields: [
       {
@@ -18,11 +18,6 @@ export default {
           maxLength: 96,
         },
       }, 
-      {
-        name: 'body',
-        title: 'Presse',
-        type: 'blockContent',
-      },
       {
         name: 'imagesGallery',
         title: 'Images gallery',
