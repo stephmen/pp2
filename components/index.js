@@ -10,6 +10,7 @@ export { default as Disques } from './Disques';
 export { default as Histoire } from './Histoire';
 export { default as LesAmis } from './LesAmis';
 export { default as PPPhoto } from './PourPourPhoto' ;
+export { default as Photos } from './Photos' ;
 export { default as MainPage } from './Styled-Component/pageone.styled' ;
 
  

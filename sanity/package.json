@@ -30,7 +30,6 @@
   },
   "repository": {
     "type": "git",
-    // former sanity"url": "https://github.com/stephmen/PourpourNext.git"
     "url": "https://github.com/stephmen/pp2.git"
   }
 }
