@@ -3,7 +3,7 @@ import { PourPourLogo } from '../components';
 import { PPPhoto } from '../components'
 import { MainPage }  from '../components/Styled-Component/pageone.styled';
 import { useOnClickOutside } from '../hooks';
-import { Photos } from '../components'
+import Carousel from '../components/Carousel';
 
 const PageOne = (props) => {
    
@@ -14,9 +14,9 @@ const PageOne = (props) => {
   return (
     <MainPage>
     <div>
-    <PourPourLogo className="logo" size="70rem" margin="6rem auto"/>
-    <PPPhoto className="photo" src="/PlacedesArtsPP1.jpg"/>
-    <Photos />
+    {/* <PourPourLogo className="logo" size="70rem" margin="6rem auto"/> */}
+    {/* <PPPhoto className="photo" src="/PlacedesArtsPP1.jpg"/> */}
+    <Carousel /> 
     </div>
     </MainPage>
 
