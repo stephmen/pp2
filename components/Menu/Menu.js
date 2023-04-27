@@ -22,6 +22,12 @@ const Menu = ({ open, setOpen }) => {
       <Link href="/presse">
         Presse
       </Link>
+      <Link href="/images">
+        Photos
+      </Link>
+      <Link href="/video">
+        Vidéos
+      </Link>
       {/* <Link href="/articles-archives">
         Projets/Archives
       </Link> */}

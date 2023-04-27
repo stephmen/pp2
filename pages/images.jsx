@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
-import { PourPourLogo } from '../components';
-import { PPPhoto } from '../components'
 import { MainPage }  from '../components/Styled-Component/pageone.styled';
 import { useOnClickOutside } from '../hooks';
-import Carousel from '../components/Carousel';
+import imageGallery from '../components/imageGallery/imageGallery';
+import ImageGallery from "../components/imageGallery/imageGallery";
 
 const PageOne = (props) => {
    
@@ -16,7 +15,7 @@ const PageOne = (props) => {
     <div>
     {/* <PourPourLogo className="logo" size="70rem" margin="6rem auto"/> */}
     {/* <PPPhoto className="photo" src="/PlacedesArtsPP1.jpg"/> */}
-    <Carousel /> 
+    <ImageGallery /> 
     </div>
     </MainPage>
 
