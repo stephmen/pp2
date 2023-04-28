@@ -4,6 +4,7 @@ import { CalendarStyle } from "./Calendar.styled";
 
 
 
+
 const Calendar = (props) => {
    
   const [open, setOpen] = useState(false);
@@ -21,11 +22,10 @@ const Calendar = (props) => {
     
     
     <header>
-    <div className="col">
-      <h3>Date</h3></div>
-    <div className="col"><h3>Spectacle</h3></div>
+    <div className="col"><h3>Nos Prochains Spectacles</h3></div>
+    {/* <div className="col"><h3>Spectacle</h3></div>
     <div className="col"><h3> Endroit</h3></div>
-    <div className="col"><h3> + Info</h3></div>
+    <div className="col"><h3> + Info</h3></div> */}
     </header>
     
     
@@ -35,7 +35,8 @@ const Calendar = (props) => {
       ({ _id, title = '', slug = '', publishedAt, endroit
       = '' }) =>
       slug && (
-        <div className='row'>
+        <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
+        <div key={_id} className='row'>
         
         <div  className="col"> {new Date(publishedAt).toLocaleDateString('fr-FR',options)} 
         </div>
@@ -47,6 +48,7 @@ const Calendar = (props) => {
         </Link>
         </div>
         </div>
+        </Link>
         ))}
     
 

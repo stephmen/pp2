@@ -4,6 +4,7 @@ import { PPPhoto } from '../components'
 import { MainPage }  from '../components/Styled-Component/pageone.styled';
 import { useOnClickOutside } from '../hooks';
 
+
 const PageOne = (props) => {
    
   const [open, setOpen] = useState(false);

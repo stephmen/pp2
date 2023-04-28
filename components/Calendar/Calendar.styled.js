@@ -26,6 +26,10 @@ header {
   border-bottom: 0px solid
 
 }   
+.row:hover, .row:hover > * {
+  cursor: pointer;
+  background-color: #f7f7f7;
+  }
 
 @media (max-width: 768px) {
     .container {
@@ -47,8 +51,19 @@ header {
     .col:nth-child(3) {
     padding-left: 1rem;
   }
-
+  .row {
+  cursor: pointer;
   }
+
+  /* .row:hover {
+  background-color: #f7f7f7;
+  } */
+
+.row:hover, .row:hover > * {
+  cursor: pointer;
+  background-color: #f7f7f7;
+  }
+}
 
 
 `;

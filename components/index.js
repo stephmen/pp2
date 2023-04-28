@@ -9,8 +9,9 @@ export { default as Press } from './Press';
 export { default as Disques } from './Disques';
 export { default as Histoire } from './Histoire';
 export { default as LesAmis } from './LesAmis';
-export { default as PPPhoto } from './PourPourPhoto' ;
-export { default as Carousel } from './Carousel' ;
+export { default as PPPhoto } from './PourPourPhoto';
+export { default as Carousel } from './Carousel';
+export { default as MobilePage } from './MobilePage';
 export { default as MainPage } from './Styled-Component/pageone.styled' ;
 
  

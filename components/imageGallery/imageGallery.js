@@ -45,7 +45,6 @@ function ImageGallery() {
         <Image src="/images/image1.jpg" width={300} height={200} onClick={() => handleClick('/images/image1.jpg')} />
         <Image src="/images/image2.jpg" width={300} height={200} onClick={() => handleClick('/images/image2.jpg')} />
         <Image src="/images/image3.jpg" width={300} height={200} onClick={() => handleClick('/images/image3.jpg')} />
-        {/* <Image src="/images/image4.jpg" width={300} height={200} onClick={() => handleClick('/images/image4.jpg')} /> */}
         <Image src="/images/image5.jpg" width={300} height={200} onClick={() => handleClick('/images/image5.jpg')} />
         <Image src="/images/image6.jpg" width={300} height={200} onClick={() => handleClick('/images/image6.jpg')} />
         <Image src="/images/image7.jpg" width={300} height={200} onClick={() => handleClick('/images/image7.jpg')} />

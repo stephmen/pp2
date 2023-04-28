@@ -14,7 +14,7 @@ background-color: "#b3cad6";
 height: auto;
 @media (min-height:600px) {
 
-    width: ${props => props.size ? props.size : "75%"};
+    width: ${props => props.size ? props.size : "25%"};
 }
 }
 
