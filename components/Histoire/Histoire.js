@@ -22,14 +22,13 @@ const Histoire = (props) => {
     <Main>
     <Titre> {props.posts[0].title}</Titre>
     <BlockContent blocks={props.posts[0].body[1]}/>
-    <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={600} width={850} />
+    <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={300} width={425} />
     <BlockContent blocks={props.posts[0].body[2]}/>
     <BlockContent blocks={props.posts[0].body[3]}/>
     <BlockContent blocks={props.posts[0].body[4]}/>
     <BlockContent blocks={props.posts[0].body[5]}/>
-    <Image src={urlFor(props.posts[0].imagesGallery[1]).url()} alt="0" height={600} width={850} />
     <BlockContent blocks={props.posts[0].body[6]}/>
-    {/* <Image src={urlFor(props.posts[0].imagesGallery[1]).width(850).url()}/> */}
+    <Image src={urlFor(props.posts[0].imagesGallery[1]).url()} alt="0" height={300} width={470} /> 
     </Main>
     )
   }

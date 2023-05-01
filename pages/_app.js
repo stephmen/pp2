@@ -13,12 +13,14 @@ const  MyApp = ({ Component, pageProps }) => {
   useOnClickOutside(node, () => setOpen(false));
   
   return( 
+    
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header open="open" />
       <Component {...pageProps } /> 
       <Footer />
     </ThemeProvider>
+   
     )
 }
 

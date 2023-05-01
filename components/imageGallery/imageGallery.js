@@ -9,6 +9,7 @@ const GalleryContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10rem;
+  style={{ objectFit: 'cover', objectPosition: 'center' }}
 `;
 
 const ImageOverlay = styled.div`

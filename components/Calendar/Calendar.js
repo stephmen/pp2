@@ -21,12 +21,7 @@ const Calendar = (props) => {
     
     
     
-    <header>
-    <div className="col"><h3>Nos Prochains Spectacles</h3></div>
-    {/* <div className="col"><h3>Spectacle</h3></div>
-    <div className="col"><h3> Endroit</h3></div>
-    <div className="col"><h3> + Info</h3></div> */}
-    </header>
+   
     
     
     
@@ -42,13 +37,13 @@ const Calendar = (props) => {
         </div>
         <div className="col"> {title} </div>      
         <div className="col"> {endroit} </div>
-        <div className="col">
+        {/* <div className="col">
         <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
         <img src="/LesAmisCrop/sue3.png"  height="50"/>
         </Link>
+        </div> */}
         </div>
-        </div>
-        </Link>
+        </Link >
         ))}
     
 

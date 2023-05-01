@@ -14,11 +14,11 @@ export default function PageTwo()  {
   useOnClickOutside(node, () => setOpen(false));
   return (
     <div>
-    <MainPage>
-    <LesAmis size="100%" margintop="5rem"/>
-
+    {/* <MainPage> */}
+    {/* <LesAmis size="100%" margintop="5rem"/> */}
+    {/* <PourPourLogo/> */}
     <MobilePage/>
-    </MainPage>
+    {/* </MainPage> */}
     </div>
 
   )

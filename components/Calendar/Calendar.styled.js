@@ -23,7 +23,9 @@ header {
   flex: 1
 }
 .row {
-  border-bottom: 0px solid
+  border-bottom: 0px solid;
+  padding-top: 2rem;
+  
 
 }   
 .row:hover, .row:hover > * {
@@ -53,11 +55,12 @@ header {
   }
   .row {
   cursor: pointer;
+  padding-top: 2rem ;
   }
 
-  /* .row:hover {
+  .row:hover {
   background-color: #f7f7f7;
-  } */
+  }
 
 .row:hover, .row:hover > * {
   cursor: pointer;

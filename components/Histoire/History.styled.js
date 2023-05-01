@@ -1,33 +1,25 @@
 import styled from 'styled-components';
 
 export const Titre = styled.h1`
+  /* add any styles you want for the heading */
+`;
 
-
-`
-// export const Text = styled.p`
-    
-
-    //  .PhotoMilieu{
-    //     padding: 0 0 3rem;
-
-    //     float: center;
-    //     width: 100%;
-    //     height: auto;     
-    //  }
-    // .PhotoBas{
-    //     float:bottom;
-    //     width: 100%;
-    //     height: auto;
-    //     margin-top: 3rem;  
-    // }
-   
-// `
 export const Main = styled.div`
-margin: 25rem;
-display: flex;
-flex-direction: column;
+  margin: 2rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-@media (max-width: 600px) {
-    margin:  4rem 2rem;
-}
-`
+  @media only screen and (min-width: 390px) and (max-width: 844px) {
+    margin: 2rem;
+    margin-top: 5rem
+  }
+
+  @media only screen and (min-width: 845px) {
+    margin: 20rem;
+  }
+`;
+
+

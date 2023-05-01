@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react";
 import Link from 'next/link'
-import sanityClient from '../client'
+import sanityClient from '../../client'
 import groq from 'groq'
-import { ThemeProvider } from 'styled-components';
-import { theme } from '.././styles/theme';
-import { PourPourLogo, Calendar, LesAmis, Show} from '../components';
-import { Main } from '../components/Styled-Component/spectacle.styled'
-import { useOnClickOutside } from '../hooks';
+import { ThemeProvider } from '../';
+import { theme } from '/styles/theme';
+import { Calendar, LesAmis } from '../';
+import { Main } from '../'
+import { useOnClickOutside } from '../';
 
-const Spectacles = (props) => {
+const Show = (props) => {
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
@@ -23,12 +23,11 @@ const Spectacles = (props) => {
     </header>
     <LesAmis size="100%"/>
     <Main >
-    {/* <div className="main"> */}
+    
    
     <Calendar {...props} />
-    {/* </div> */}
+   
     </Main>
-    {/* <Show/> */}
     </div>
     )
     
@@ -36,10 +35,10 @@ const Spectacles = (props) => {
   
   const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
   
-  Spectacles.getInitialProps = async () => ({
+  Show.getInitialProps = async () => ({
   posts: await client.fetch(groq`
     *[_type == "spectacle"]
   `)
 })
 
-export default Spectacles
+export default Show

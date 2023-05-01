@@ -8,13 +8,15 @@ background-color: "#b3cad6";
     /* border: 3px dashed blue; */
     /* margin: 4rem auto; */
     margin: ${props => props.margin ? props.margin : ""};
+    margin-top: ${props => props.margintop ? props.margintop : ""};
     width: ${props => props.size ? props.size : "75%"};
+    
     
 
 height: auto;
 @media (min-height:600px) {
 
-    width: ${props => props.size ? props.size : "25%"};
+    width: ${props => props.size ? props.size : ""};
 }
 }
 
