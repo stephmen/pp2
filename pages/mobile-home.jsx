@@ -5,8 +5,11 @@ import { MainPage }  from '../components/Styled-Component/pageone.styled';
 import { useOnClickOutside } from '../hooks';
 import Image from 'next/image';
 import  { MobilePage } from '../components';
+import sanityClient from '../client';
+import groq from 'groq';
 
-export default function PageTwo()  {
+
+const  PageTwo = (props) => {
    
   const [open, setOpen] = useState(false);
   const node = useRef();
@@ -17,11 +20,19 @@ export default function PageTwo()  {
     {/* <MainPage> */}
     {/* <LesAmis size="100%" margintop="5rem"/> */}
     {/* <PourPourLogo/> */}
-    <MobilePage/>
+    <MobilePage {...props}/>
+    
     {/* </MainPage> */}
     </div>
 
   )
 }
+const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
+  
+PageTwo.getInitialProps = async () => ({
+posts: await client.fetch(groq`
+  *[_type == "spectacle"]
+`)
+})
 
-// export default PageTwo
+export default PageTwo

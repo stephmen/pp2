@@ -3,7 +3,7 @@ export const CalendarStyle = styled.div`
 // <<<<<<< HEAD
 
 .container {
-  margin: 6rem 4rem;
+  margin: 1rem 1rem;
   background-color: #eff971;
   
 }
@@ -35,7 +35,8 @@ header {
 
 @media (max-width: 768px) {
     .container {
-      margin: 1rem 0rem;
+      margin: 1rem 0rem
+      padding: 4rem;
     }
 
     header {

@@ -1,9 +1,9 @@
 import React from "react";
-import { PourPourLogo } from '/components';
+import { PourPourLogo, Calendar } from '/components';
 import { CenteredContainer } from './MobilePage.styled';
 import Image from 'next/image';
 
-const MobilePage = () => {
+const MobilePage = (props) => {
 
   const handleClick = (imageUrl) => {
     console.log(`Clicked image with URL: ${imageUrl}`);
@@ -16,6 +16,8 @@ const MobilePage = () => {
         <PourPourLogo className='logo' size="24rem" margintop='1rem'/>
         <p>Un groupe de musique unique qui est né de la fusion de différents groupes artistiques à Montréal dans les années 70 et 80. Après une pause, le groupe s&apos;est reformé en 1995 avec de nouveaux membres et est aujourd&apos;hui composé de 19 musiciens talentueux. Leur musique mélange différents genres avec des sons colorés et romantiques, invitant petits et grands à danser dans une salle de spectacle ou dans une ruelle près de chez vous. Ils ont sorti cinq albums et ont joué dans de nombreux spectacles au Québec et à l&apos;étranger</p>
         <iframe src="https://player.vimeo.com/video/73329450?portrait=0&byline=0" frameBorder="0" allow="autoplay; fullScreen; picture-in-picture" allowFullScreen layout="fill" />
+        <h2>Nos Prochains Spectacles</h2>
+        <Calendar {...props}/>
       </CenteredContainer>
     
   );
