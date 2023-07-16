@@ -28,7 +28,18 @@ h2 {
 iframe {
   display: block;
   padding-top: 2rem
+  width: 100%;
+  max-width: 480px;
+  height: calc((9 / 16) * 100vw);
+  max-height: 270px;
   /* margin: 1rem auto; */
 }
+
+/* iframe {
+    width: 100%;
+    max-width: 480px;
+    height: calc((9 / 16) * 100vw);
+    max-height: 270px;
+  } */
 `;
 

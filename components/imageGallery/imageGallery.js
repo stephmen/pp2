@@ -9,6 +9,8 @@ const GalleryContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10rem;
+  margin: 0 auto; /* Add this */
+  max-width: 1200px; /* Add this */
   style={{ objectFit: 'cover', objectPosition: 'center' }}
 `;
 
