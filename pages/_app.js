@@ -16,9 +16,9 @@ const  MyApp = ({ Component, pageProps }) => {
     
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Header open="open" />
+      {/* <Header open="open" /> */}
       <Component {...pageProps } /> 
-      <Footer />
+      {/* <Footer /> */}
     </ThemeProvider>
    
     )

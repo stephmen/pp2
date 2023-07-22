@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
-import { PPPhoto } from '../components'
-import { PourPourLogo, Calendar, LesAmis } from '../components';
-import { MainPage }  from '../components/Styled-Component/pageone.styled';
 import { useOnClickOutside } from '../hooks';
 import Image from 'next/image';
-import  { MobilePage } from '../components';
+import  { MobilePage , Menu, Burger } from '../components';
 import sanityClient from '../client';
 import groq from 'groq';
+
 
 
 const  PageTwo = (props) => {
@@ -17,12 +15,10 @@ const  PageTwo = (props) => {
   useOnClickOutside(node, () => setOpen(false));
   return (
     <div>
-    {/* <MainPage> */}
-    {/* <LesAmis size="100%" margintop="5rem"/> */}
-    {/* <PourPourLogo/> */}
+    <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
     <MobilePage {...props}/>
-    
-    {/* </MainPage> */}
+    <Menu open={open} setOpen={setOpen} id={menuId} />
+
     </div>
 
   )
