@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useOnClickOutside } from '../hooks';
 import Image from 'next/image';
-import  { MobilePage , Menu, Burger } from '../components';
+import  { MobilePage , Menu, Burger, Footer } from '../components';
 import sanityClient from '../client';
 import groq from 'groq';
 
@@ -18,6 +18,7 @@ const  PageTwo = (props) => {
     <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
     <MobilePage {...props}/>
     <Menu open={open} setOpen={setOpen} id={menuId} />
+    <Footer />
 
     </div>
 
