@@ -1,6 +1,4 @@
 import React from "react";
-import { PourPourLogo, Calendar } from '/components';
-import { CenteredContainer } from './MobilePage.styled';
 import Image from 'next/image';
 
 const MobilePage = (props) => {

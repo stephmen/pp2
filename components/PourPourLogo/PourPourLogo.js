@@ -5,7 +5,7 @@ export default function PourPourLogo (props) {
 
 return(  
 <PPLogo {...props}>
-<img className="logo" src="/Pourpour_Logo.png" />
+<img className="logo" src="/pp4/la_pourpour_titre solo.png" />
 </PPLogo>
 )
 }
