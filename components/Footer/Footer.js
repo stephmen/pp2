@@ -12,8 +12,8 @@ export default function Footer() {
       height={40} alt="" />
           </a>
           <a href="https://fanfarepourpour.bandcamp.com/">
-          <Image src="/bandcamp-button-bc-circle-green-64.png" width={80}
-      height={90} alt="" />
+          <Image src="/bandcamp-button-bc-circle-green-64.png" width={50}
+      height={50} alt="" />
           </a>
         </div>
       </footer>
