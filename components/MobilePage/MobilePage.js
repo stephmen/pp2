@@ -10,7 +10,7 @@ const MobilePage = (props) => {
   return (
     
       <div>
-        <Image src="/pp4/index_V1607.jpg" alt="image7" fill={true} onClick={() => handleClick('/pp4/index_V1607.jpg')} />
+        <Image src="/pp4/site_index_2607.jpg" alt="image7" fill={true} onClick={() => handleClick('/pp4/index_V1607.jpg')} />
       </div>
     
   );
