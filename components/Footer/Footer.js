@@ -8,11 +8,15 @@ export default function Footer() {
       <footer className="footer">
         <div className="bottomIcon">
           <a href="https://www.facebook.com/fanfare.pourpour">
-          <Image src="/f_logo_RGB-Blue_58.png" width={40}
-      height={40} alt="" />
+          <Image src="/f_logo_RGB-Blue_58.png" width={50}
+      height={50} alt="" />
           </a>
           <a href="https://fanfarepourpour.bandcamp.com/">
           <Image src="/bandcamp-button-bc-circle-green-64.png" width={50}
+      height={50} alt="" />
+          </a>
+          <a href="https://actuellecd.com/en/artiste/fanfarepourpour_/fanfare-pourpour">
+          <Image src="/pp4/logo__actuellecd.png" width={110}
       height={50} alt="" />
           </a>
         </div>
