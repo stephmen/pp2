@@ -16,7 +16,7 @@ export default function Footer() {
       height={50} alt="" />
           </a>
           <a href="https://actuellecd.com/en/artiste/fanfarepourpour_/fanfare-pourpour">
-          <Image src="/pp4/logo__actuellecd.png" width={110}
+          <Image src="/pp4/actuellecd_crop.png" width={110}
       height={50} alt="" />
           </a>
         </div>
