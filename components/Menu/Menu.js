@@ -11,7 +11,7 @@ const Menu = ({ open, setOpen }) => {
         Spectacles
       </Link>
       <Link href="/disques">
-        Disques
+        Albums
       </Link>
       {/* <Link href="/photos">
         Photos

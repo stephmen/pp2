@@ -35,13 +35,13 @@ const Calendar = (props) => {
         
         <div  className="col"> {new Date(publishedAt).toLocaleDateString('fr-FR',options)} 
         </div>
-        <div className="col"> {title} </div>      
+        {/* <div className="col"> {title} </div>       */}
         <div className="col"> {endroit} </div>
-        {/* <div className="col">
+        <div className="col">
         <Link key={_id} href="/spectacles/[slug]" as={`/spectacles/${slug.current}`}>
         <img src="/LesAmisCrop/sue3.png"  height="50"/>
         </Link>
-        </div> */}
+        </div>
         </div>
         </Link >
         ))}

@@ -16,7 +16,7 @@ const PageOne = (props) => {
     
     <div>
     <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-    <Image src="/pp4/index_fond_sans rouge en bas.jpg" alt="image7" fill={true} onClick={() => handleClick('/pp4/index_V1607.jpg')} />
+    <Image src="/pp4/index_ordinateur_fond.jpg" alt="image7" fill={true} onClick={() => handleClick('/pp4/index_V1607.jpg')} />
     <PourPourLogo />
     <Footer />
     </div>

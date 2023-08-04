@@ -20,7 +20,7 @@ export const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     padding: 1rem ;
     font-weight: bold;
@@ -38,4 +38,11 @@ export const StyledMenu = styled.nav`
       color: ${({ theme }) => theme.primaryHover};
     }
   }
+  /* Other styles */
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 33.33%; /* One-third of the view */
+  }
+
+  /* Other styles */
 `;
