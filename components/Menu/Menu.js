@@ -13,9 +13,6 @@ const Menu = ({ open, setOpen }) => {
       <Link href="/disques">
         Albums
       </Link>
-      {/* <Link href="/photos">
-        Photos
-        </Link> */}
       <Link href="/histoire">
         Histoire
       </Link>
@@ -28,9 +25,6 @@ const Menu = ({ open, setOpen }) => {
       <Link href="/video">
         Vidéos
       </Link>
-      {/* <Link href="/articles-archives">
-        Projets/Archives
-      </Link> */}
     </StyledMenu>
   )
 }
