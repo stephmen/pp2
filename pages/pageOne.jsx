@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
 import { PourPourLogo } from '../components';
-import { PPPhoto } from '../components'
+import { MobilePage, Burger, Footer } from '../components'
 import { MainPage }  from '../components/Styled-Component/pageone.styled';
 import { useOnClickOutside } from '../hooks';
+import Image from 'next/image';
+
 
 const PageOne = (props) => {
    
@@ -11,12 +13,14 @@ const PageOne = (props) => {
   const menuId = "main-menu";
   useOnClickOutside(node, () => setOpen(false));
   return (
-    <MainPage>
+    
     <div>
-    <PourPourLogo className="logo" size="70rem" margin="6rem auto"/>
-    <PPPhoto className="photo" src="/PlacedesArtsPP1.jpg"/>
+    <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+    <Image src="/pp4/index_ordinateur_fond.jpg" alt="image7" fill={true} onClick={() => handleClick('/pp4/index_V1607.jpg')} />
+    <PourPourLogo />
+    <Footer />
     </div>
-    </MainPage>
+  
 
   )
 }

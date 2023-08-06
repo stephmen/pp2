@@ -3,18 +3,18 @@ export const StyledFooter = styled.footer`
 
 
   /* background-color: #122b49; */
-  background-color: #1974D2;
+  /* background-color: #1974D2; */
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
   height: 3rem;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-start; 
   white-space: 30px;
   align-items: center;
 
   img {
-      padding: 30px;
+      padding: 10px ;
   }
 
 `

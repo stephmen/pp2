@@ -4,7 +4,7 @@ import sanityClient from '../client'
 import groq from 'groq'
 import { ThemeProvider } from 'styled-components';
 import { theme } from '.././styles/theme';
-import { PourPourLogo, Calendar, LesAmis } from '../components';
+import { PourPourLogo, Calendar, LesAmis, Show} from '../components';
 import { Main } from '../components/Styled-Component/spectacle.styled'
 import { useOnClickOutside } from '../hooks';
 
@@ -18,14 +18,17 @@ const Spectacles = (props) => {
   
   return(
     <div>
-    <h1>test</h1>
+     <header>
+    <div className="col"><h3>Nos Prochains Spectacles</h3></div>
+    </header>
     <LesAmis size="100%"/>
     <Main >
     {/* <div className="main"> */}
-    
+   
     <Calendar {...props} />
     {/* </div> */}
     </Main>
+    {/* <Show/> */}
     </div>
     )
     

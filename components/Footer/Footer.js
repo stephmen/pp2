@@ -7,17 +7,18 @@ export default function Footer() {
     <StyledFooter>
       <footer className="footer">
         <div className="bottomIcon">
-          <a href="mailto:loupourpourbabin@gmail.com">
-            <img src="/Courrier.png" alt="" />
-          </a>
           <a href="https://www.facebook.com/fanfare.pourpour">
-          <img src="/facebook.png" alt="" />
+          <Image src="/f_logo_RGB-Blue_58.png" width={50}
+      height={50} alt="" />
           </a>
-          <a href="https://www.youtube.com/watch?v=XlesgKIuZec&list=RDXlesgKIuZec&start_radio=1&t=529">
-          <img src="/Youtube.png" alt="" />
+          <a href="https://fanfarepourpour.bandcamp.com/">
+          <Image src="/bandcamp-button-bc-circle-green-64.png" width={50}
+      height={50} alt="" />
           </a>
-
-          {/* <img src="twitter.png" alt="" /> */}
+          <a href="https://actuellecd.com/en/artiste/fanfarepourpour_/fanfare-pourpour">
+          <Image src="/actuellelogo.png" width={110}
+      height={50} alt="" />
+          </a>
         </div>
       </footer>
     </StyledFooter>

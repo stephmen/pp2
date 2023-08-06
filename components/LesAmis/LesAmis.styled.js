@@ -12,7 +12,8 @@ background-color: "#b3cad6";
 
 height: auto;
 @media (min-height:600px) {
-
+    margin-top: 4rem;
+    margin-top: ${props => props.margintop ? props.margintop : "10rem"}
     width: ${props => props.size ? props.size : "75%"};
 }
 }
