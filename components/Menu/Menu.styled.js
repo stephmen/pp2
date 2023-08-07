@@ -1,20 +1,22 @@
 import styled from 'styled-components';
 
 export const StyledMenu = styled.nav`
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'}; 
-  /* z-index: 10; */
+  --mobile-width: 33.33%;
+  --transition-time: 0.3s;
+
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: flex-start; /* Change 'top' to 'flex-start' to align menu items at the top */
   background: ${({ theme }) => theme.primaryLight};
-  height: 100vh;
+  min-height: 100vh; /* Set min-height to 100vh to ensure the background covers at least the viewport height */
   text-align: left;
   padding: 2rem;
   position: fixed;
   top: 0;
   right: 0;
-  transition: transform 0.3s ease-in-out;
-  
+  transition: transform var(--transition-time) ease-in-out;
+
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
@@ -22,13 +24,13 @@ export const StyledMenu = styled.nav`
   a {
     font-size: 1rem;
     text-transform: uppercase;
-    padding: 1rem ;
+    padding: 1rem;
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
-    transition: color 0.3s linear;
-    
+    transition: color var(--transition-time) linear;
+
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 1.5rem;
       text-align: left;
@@ -38,10 +40,11 @@ export const StyledMenu = styled.nav`
       color: ${({ theme }) => theme.primaryHover};
     }
   }
+
   /* Other styles */
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 33.33%; /* One-third of the view */
+    width: var(--mobile-width); /* One-third of the view */
   }
 
   /* Other styles */
