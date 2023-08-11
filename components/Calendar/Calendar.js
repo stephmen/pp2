@@ -17,12 +17,10 @@ const Calendar = (props) => {
           slug ? (
             <Link key={_id} href='/spectacles/[slug]' as={`/spectacles/${slug.current}`}>
               <div key={_id} className='row'>
-                <div className='date'>{new Date(publishedAt).toLocaleDateString('fr-FR', options)}</div>
+                <div className='date'>Le {new Date(publishedAt).toLocaleDateString('fr-FR', options)}</div>
                 <div className='location'>{endroit}</div>
-                <div className='image'>
-                  {/* <Link key={_id} href='/spectacles/[slug]' as={`/spectacles/${slug.current}`}>
-                    <img src='/LesAmisCrop/sue3.png' height='50' />
-                  </Link> */}
+                <div className='info'>
+                  Info
                 </div>
               </div>
             </Link>

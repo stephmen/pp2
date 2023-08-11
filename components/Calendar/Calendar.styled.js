@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const CalendarStyle = styled.div`
   .container {
-    margin: 1rem 1rem;
-    background-color: #eff971;
+    margin: 5rem 5rem;
+    background-color: #C7EDF6;
+    opacity: 0.8;
+    padding: 2rem 8rem ;
   }
 
   .row {
@@ -19,29 +21,34 @@ export const CalendarStyle = styled.div`
   }
 
   .date {
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    
     font-size: 1.2rem;
+    color: #dc143c
+   ;
   }
 
   .location {
+    display: flex;
     margin-top: 0.5rem;
     font-size: 1rem;
-  }
-
-  .image {
-    margin-top: 1rem;
-    display: flex;
     justify-content: center;
   }
 
-  .image img {
-    height: 50px;
+  .info {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
   }
+
+  
 
   @media (max-width: 768px) {
     .container {
-      margin: 1rem 0rem;
-      padding: 4rem;
+      //margin: 3rem 3rem;
+      padding: 1rem;
     }
 
     .row {
