@@ -6,6 +6,7 @@ import BlockContent from '@sanity/block-content-to-react'
 import sanityClient from '../../client'
 import { ShowStyle } from '../../components/Styled-Component/spectacle.styled'
 
+
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
 }
@@ -24,8 +25,9 @@ const Post = (props) => {
   } = {...props}
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return (
+      <div>
     <ShowStyle>
-    
+      <Image className="fond" src="/pp4/spectacles/page2_spectacles_ordinateur_tout.jpg" alt="image7" fill={true}  /> 
       <h1 className="title">{title}  </h1>
       <h2 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h2>
       <h2 className="endroit">{endroit}  </h2>
@@ -41,6 +43,7 @@ const Post = (props) => {
       />
       {/* </div> */}
     </ShowStyle>
+    </div>
   )
 }
 

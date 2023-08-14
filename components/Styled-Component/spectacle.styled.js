@@ -26,6 +26,10 @@ grid-gap: 0px;
     align-self: end;
     grid-area:  3 / 1 / auto / auto  ;
 }
+
+.fond{
+    z-index: -1;
+}
 img{
     grid-area: 6 / 1 ;
 }
