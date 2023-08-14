@@ -23,6 +23,7 @@ const Calendar = (props) => {
                   Info
                 </div>
               </div>
+              
             </Link>
           ) : null
         )}
