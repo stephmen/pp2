@@ -27,7 +27,7 @@ const Post = (props) => {
   return (
       <div>
     <ShowStyle>
-      <Image className="fond" src="/pp4/spectacles/page2_spectacles_ordinateur_tout.jpg" alt="image7" fill={true}  /> 
+      <Image className="fond" src="/pp4/spectacles/page2_fond_solo_spectacles1.png" alt="image7" fill={true}  /> 
       <h1 className="title">{title}  </h1>
       <h2 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h2>
       <h2 className="endroit">{endroit}  </h2>

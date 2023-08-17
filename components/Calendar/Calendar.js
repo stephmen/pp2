@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { CalendarStyle } from './Calendar.styled';
+import { ExtraitDePresseComponent } from './ExtraitDePresseComponent'
+import Image from 'next/image';
 
 const Calendar = (props) => {
   const options = {
@@ -22,11 +24,13 @@ const Calendar = (props) => {
                 <div className='info'>
                   Info
                 </div>
+
               </div>
-              
+
             </Link>
           ) : null
-        )}
+          )}
+           <ExtraitDePresseComponent />
       </div>
     </CalendarStyle>
   );

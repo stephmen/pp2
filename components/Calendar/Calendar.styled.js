@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const CalendarStyle = styled.div`
   .container {
-    margin: 5rem 5rem;
+    margin: 2rem 4rem 3rem;
     background-color: #C7EDF6;
     opacity: 0.8;
-    padding: 2rem 8rem ;
+    padding: 2rem 6rem ;
   }
 
   .row {
@@ -43,6 +43,8 @@ export const CalendarStyle = styled.div`
     font-weight: bold;
   }
 
+  Image {}
+
   
 
   @media (max-width: 768px) {
@@ -55,5 +57,6 @@ export const CalendarStyle = styled.div`
       border-bottom: none;
       padding-bottom: 2rem;
     }
+    
   }
 `;

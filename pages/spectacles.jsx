@@ -11,6 +11,7 @@ import { Main } from '../components/Styled-Component/spectacle.styled'
 import { useOnClickOutside } from '../hooks';
 import Image from 'next/legacy/image'; // Import next/legacy/image
 import styled from 'styled-components'; // Import styled-components
+import HomeLogo from "../components/HomeLogo";
 
 const Container = styled.div`
   position: fix;
@@ -36,13 +37,16 @@ const MainContent = styled(Main)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 8rem  1rem
+  /* margin: 4rem  1rem; */
+  /* Image: 4rem 4rem; */
+  /* padding: 1rem */
 `;
 
 const ImageContainer = styled.div`
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex; */
+  justify-content: center;
+  align-items: center;
+  //margin: rem; /* Adjust margin as needed */
 `;
 
 const Spectacles = (props) => {
@@ -56,13 +60,14 @@ const Spectacles = (props) => {
   return (
     <div>
       <BackgroundImage>
-        <Image src="/pp4/page_spectacles_ordinateur_fond solo.jpg" alt="image7" layout='fill'  />
+        <Image src="/pp4/spectacles/page_spectacles_ordinateur_fond solo_2.jpg" alt="image7" layout='fill'  />
       </BackgroundImage>
-      
+      <HomeLogo/>
       <MainContent>
         <Image src={spectaclepng} alt="image7"/>
         <Calendar {...props} />
-      </MainContent>
+        <img src="/pp4/spectacles/typo_page_spectacles_ordinateur_contact.png" alt=""/>
+        </MainContent>
     </div>
   );
 }
@@ -71,7 +76,7 @@ const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
 
 Spectacles.getInitialProps = async () => ({
   posts: await client.fetch(groq`
-    *[_type == "spectacle"]
+    *[_type == "spectacle"]  | order(publishedAt asc)  // Ordering the results by publishedAt in descending order
   `)
 })
 

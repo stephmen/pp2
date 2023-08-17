@@ -7,7 +7,7 @@ export default function HomeLogo() {
     return(
         <StyledHomeLogo>
         <Link href="/">
-        <img src="/MaisonToit.png" alt=""/>
+        <img src="/pp4/spectacles/page_spectacles_ordinateur_home.png" alt=""/>
         </Link>
         </StyledHomeLogo>
     )
