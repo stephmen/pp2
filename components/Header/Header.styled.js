@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
   top: 0; 
   width: 100%;
   height: 4rem;
-  background-color: #FF007F;
+  /* background-color: #FF007F; */
   /* background-color: #e80d2a;  */
   /* color: 04BCE4; */
   

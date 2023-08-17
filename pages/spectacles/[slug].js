@@ -5,7 +5,7 @@ import Image from 'next/image'
 import BlockContent from '@sanity/block-content-to-react'
 import sanityClient from '../../client'
 import { ShowStyle } from '../../components/Styled-Component/spectacle.styled'
-
+import { Header, Burger, Footer, Menu } from '../../components/'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -26,6 +26,7 @@ const Post = (props) => {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return (
       <div>
+    <Header/>
     <ShowStyle>
       <Image className="fond" src="/pp4/spectacles/page2_fond_solo_spectacles1.png" alt="image7" fill={true}  /> 
       <h1 className="title">{title}  </h1>

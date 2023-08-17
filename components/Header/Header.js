@@ -20,7 +20,7 @@ export default function Header() {
         <div className="header-wrapper">
         {/* <Link href="/" onClick={() => setOpen(!open)}> */}
         <Link href="/">
-        <PourPourLogo size="5rem"/>
+        <HomeLogo size="5rem"/>
         </Link>
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
         <Menu open={open} setOpen={setOpen} id={menuId} />
