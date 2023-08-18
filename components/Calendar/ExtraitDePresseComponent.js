@@ -10,15 +10,15 @@ const Container = styled.div`
 
 const Quote = styled.span`
   font-weight: 700;
-  font-size: 12pt;
+  font-size: 9pt;
   color: #1c1a00;
 `;
 
 const Centered = styled.p`
   text-align: center;
-  line-height: 1.50;
+  line-height: 1.15;
   margin: 0;
-  font-size: 12pt;
+  font-size: 9pt;
   color: #1c1a00;
 `;
 
@@ -30,7 +30,7 @@ export const ExtraitDePresseComponent = () => {
         ...Artistes inclassables dont le noyau
       </Centered>
       <Centered>
-        s'est formé il y a plus de 30 ans,
+        s&apos;est formé il y a plus de 30 ans,
       </Centered>
       <Centered>
         <Quote className="c4">La fanfare Pourpour</Quote>
