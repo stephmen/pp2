@@ -5,7 +5,7 @@ export const CalendarStyle = styled.div`
     margin: 2rem 4rem 3rem;
     background-color: #C7EDF6;
     opacity: 0.8;
-    padding: 2rem 6rem ;
+    padding: rem 6rem ;
   }
 
   .row {
@@ -49,7 +49,7 @@ export const CalendarStyle = styled.div`
 
   @media (max-width: 768px) {
     .container {
-      //margin: 3rem 3rem;
+      margin: 4rem 1rem;
       padding: 1rem;
     }
 

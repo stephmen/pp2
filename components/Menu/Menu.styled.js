@@ -9,9 +9,9 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: flex-start; /* Change 'top' to 'flex-start' to align menu items at the top */
   background: ${({ theme }) => theme.primaryLight};
-  min-height: 100vh; /* Set min-height to 100vh to ensure the background covers at least the viewport height */
+  /* min-height: 100vh; Set min-height to 100vh to ensure the background covers at least the viewport height */
   text-align: left;
-  padding: 2rem;
+  padding: 4rem 4rem 1rem 1rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -32,7 +32,7 @@ export const StyledMenu = styled.nav`
     transition: color var(--transition-time) linear;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: left;
     }
 

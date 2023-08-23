@@ -2,10 +2,10 @@ import styled from 'styled-components';
 export const ShowStyle = styled.div`
 width: 660px;
 
-margin: auto;
+margin: 4rem 2rem 2rem 2rem;
 display: grid;
 grid-gap: 0px;
-/* grid: 4rem / auto / auto / auto */
+grid: auto / auto / auto / auto
 
 
 
@@ -28,10 +28,12 @@ grid-gap: 0px;
 }
 
 .fond{
-    z-index: -1;
+        index: -1;
 }
 img{
     grid-area: 6 / 1 ;
+    /* padding: 1rem 2rem ; */
+    
 }
 .block{   
     grid-areas: 5 / 2 ;

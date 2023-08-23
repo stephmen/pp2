@@ -16,7 +16,7 @@ export default function Header() {
 
     return(
         <StyledHeader>
-        <header>
+        
         <div className="header-wrapper">
         {/* <Link href="/" onClick={() => setOpen(!open)}> */}
         <Link href="/">
@@ -27,7 +27,7 @@ export default function Header() {
         {/* <HomeLogo/> */}
         </div>
         
-        </header>
+      
         </StyledHeader>
     )
 }
