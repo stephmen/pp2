@@ -11,7 +11,7 @@ const MobilePage = (props) => {
     
       <MobilePageStyle>
         <div className="billet-container">
-        <a href="https://lepointdevente.com/billets/clo231004001">
+        <a href="https://lepointdevente.com/billets/clo231004001" target="_blank">
         <Image className="billet" src={billet_lion} alt="billet" />
         </a>
         </div>
