@@ -1,45 +1,26 @@
 import styled from 'styled-components';
 
+export const MobilePageStyle = styled.div`
+  .billet-container {
+    position: absolute;
+    top: 27rem; /* Adjust this value for desired vertical position */
+    left: 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
 
-
-export const CenteredContainer = styled.div`
- 
-  display: flex;
-  align-items: center;
-  /* height: 100vh; */
-  flex-direction: column; /* added property */
-  justify-content: center;
-  margin-top: 4rem;
-  margin-bottom: 8rem;
-  //margin: 2rem ;
-
-
-  p {
-  margin: 2rem;
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
-h2 {
-    margin-top: 4rem
-}
-
-iframe {
-  display: block;
-  padding-top: 2rem
-  width: 100%;
-  max-width: 480px;
-  height: calc((9 / 16) * 100vw);
-  max-height: 270px;
-  /* margin: 1rem auto; */
-}
-
-/* iframe {
-    width: 100%;
-    max-width: 480px;
-    height: calc((9 / 16) * 100vw);
-    max-height: 270px;
+  /* .billet {
+    width: 50%;
+    height: 50%;
+    /* Add other styles as needed */
   } */
-`;
 
+  .background {
+    position: relative;
+    z-index: -1;
+    /* Define background styles if needed */
+  }
+`;
