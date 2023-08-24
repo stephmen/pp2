@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const BilletsLionStyle = styled.div`
   .billet-container {
     position: absolute;
-    top: 8rem; /* Adjust this value for desired vertical position */
-    left: 5rem;
+    top: 14rem; /* Adjust this value for desired vertical position */
+    right: 20rem;
     width: 20%;
     display: flex;
     justify-content: center;
@@ -12,11 +12,13 @@ export const BilletsLionStyle = styled.div`
     z-index: 1;
   }
 
-  /* .billet {
+  /* 
+  .billet {
     width: 50%;
     height: 50%;
     /* Add other styles as needed */
-  } */
+  
+  */
 
   .background {
     position: relative;
