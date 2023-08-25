@@ -4,7 +4,7 @@ export const BilletsLionStyle = styled.div`
   .billet-container {
     position: absolute;
     top: 14rem; /* Adjust this value for desired vertical position */
-    right: 20rem;
+    right: 24rem;
     width: 20%;
     display: flex;
     justify-content: center;
