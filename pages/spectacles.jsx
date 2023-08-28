@@ -1,31 +1,15 @@
 import React, { useState, useRef } from "react";
-import Link from 'next/link'
-import spectaclepng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_prochains_spectacles.png';
-import contactpng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_contact.png'
-import sanityClient from '../client'
-import groq from 'groq'
-import { ThemeProvider } from 'styled-components';
-import { theme } from '.././styles/theme';
-import { PourPourLogo, Calendar, LesAmis, Show} from '../components';
-import { Main } from '../components/Styled-Component/spectacle.styled'
+import Image from 'next/image';
+import sanityClient from '../client';
+import groq from 'groq';
 import { useOnClickOutside } from '../hooks';
-import Image from 'next/legacy/image';
 import styled from 'styled-components';
 import HomeLogo from "../components/HomeLogo";
-
-const BackgroundImage = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-`;
-
-const Header = styled.header`
-  position: relative;
-  z-index: 1;
-`;
+import { Main } from '../components/Styled-Component/spectacle.styled';
+import { Calendar } from '../components';
+import Background from '../components/BackGround'; // Assume BackgroundImage is in a separate file
+import spectaclepng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_prochains_spectacles.png';
+import contactpng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_contact.png';
 
 const MainContent = styled(Main)`
   position: relative;
@@ -38,31 +22,31 @@ const MainContent = styled(Main)`
 const Spectacles = (props) => {
   const [open, setOpen] = useState(false);
   const node = useRef();
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  
+
   useOnClickOutside(node, () => setOpen(false));
-  
+
   return (
     <div>
-      <BackgroundImage>
-        <Image src="/pp4/spectacles/page_spectacles_ordinateur_fond solo_2.jpg" alt="image7" layout='fill' objectFit='cover' />
-      </BackgroundImage>
-      <HomeLogo/>
+      <Background src="/pp4/spectacles/page_spectacles_ordinateur_fond solo_2.jpg" alt="image7" />
+      <HomeLogo />
       <MainContent>
-        <Image src={spectaclepng} alt="image7"/>
+        <Image src={spectaclepng} alt="image7" />
         <Calendar {...props} />
-        <Image src={contactpng}  alt="" />
+        <Image src={contactpng} alt="" />
       </MainContent>
     </div>
   );
-}
+};
 
-const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
+export const getStaticProps = async () => {
+  const client = sanityClient.withConfig({ apiVersion: '2021-06-07' });
+  const posts = await client.fetch(groq`
+    *[_type == "spectacle"] | order(publishedAt asc)
+  `);
 
-Spectacles.getInitialProps = async () => ({
-  posts: await client.fetch(groq`
-    *[_type == "spectacle"]  | order(publishedAt asc)
-  `)
-})
+  return {
+    props: { posts },
+  };
+};
 
 export default Spectacles;
