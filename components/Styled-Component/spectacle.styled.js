@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const ShowStyle = styled.div`
-width: 660px;
+/width: 660px;
 
 margin: 4rem 2rem 2rem 2rem;
 display: grid;

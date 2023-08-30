@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  /* block-size: 20px; */
-  position: fixed; 
-  top: 0; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 4rem;
-  /* background-color: #FF007F; */
-  /* background-color: #e80d2a;  */
-  /* color: 04BCE4; */
-  
-  
-  .header-wrapper{
-    margin: auto;
-    padding: 0.7rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .header-wrapper {
     display: flex;
-    align-content: center;
+    align-items: center; /* Center content vertically */
     justify-content: space-between;
-    background-color: FF007F;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
-`
+`;

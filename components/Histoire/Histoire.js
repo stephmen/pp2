@@ -3,6 +3,8 @@ import Image from "next/image";
 import BlockContent from '@sanity/block-content-to-react'
 import imageUrlBuilder from '@sanity/image-url'
 import sanityClient from '../../client'
+import  Background  from '../BackGround'
+import Header from "../Header/Header";
 import { Text, Titre, Main } from "./History.styled.js";
 
 const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
@@ -20,6 +22,9 @@ const Histoire = (props) => {
  
   return(
     <Main>
+    <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
+    <Header/>
+
     <Titre> {props.posts[0].title}</Titre>
     <BlockContent blocks={props.posts[0].body[1]}/>
     <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={300} width={425} />
