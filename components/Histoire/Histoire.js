@@ -27,8 +27,8 @@ const Histoire = (props) => {
 
     <Titre> {props.posts[0].title}</Titre>
     <BlockContent blocks={props.posts[0].body[0]}/>
-    <BlockContent blocks={props.posts[0].body[1]}/>
     <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={300} width={425} />
+    <BlockContent blocks={props.posts[0].body[1]}/>
     <BlockContent blocks={props.posts[0].body[2]}/>
     <BlockContent blocks={props.posts[0].body[3]}/>
     <BlockContent blocks={props.posts[0].body[4]}/>
