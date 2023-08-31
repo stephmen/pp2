@@ -5,19 +5,29 @@ import groq from 'groq';
 import { useOnClickOutside } from '../hooks';
 import styled from 'styled-components';
 import HomeLogo from "../components/HomeLogo";
-import { Calendar } from '../components';
-import Background from '../components/BackGround'; // Assume BackgroundImage is in a separate file
+import { Calendar, Header } from '../components';
+import Background from '../components/BackGround';
 import spectaclepng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_prochains_spectacles.png';
 import contactpng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_contact.png';
+
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Allow Container to expand and take remaining space */
+  padding-top: 4rem; /* Add padding to push content below the fixed header */
 
-  @media (max-width: 768px) {
-    padding: 0 1rem; /* Add some padding on mobile screens */
-  }
+`;
+
+const ResponsiveImage = styled(Image)`
+  max-width: 100%;
+  height: auto;
 `;
 
 const Spectacles = (props) => {
@@ -27,13 +37,15 @@ const Spectacles = (props) => {
   useOnClickOutside(node, () => setOpen(false));
 
   return (
-    <Container>
-      <HomeLogo />
+    <PageWrapper>
       <Background src="/pp4/spectacles/page_spectacles_ordinateur_fond solo_2.jpg" alt="image7" /> 
-      <Image src={spectaclepng} alt="image7" />
-      <Calendar {...props} />
-      <Image src={contactpng} alt="" />
-    </Container>
+      <Header />
+      <Container>
+        <ResponsiveImage src={spectaclepng} alt="image7" />
+        <Calendar {...props} />
+        <ResponsiveImage src={contactpng} alt="" />
+      </Container>
+    </PageWrapper>
   );
 };
 
