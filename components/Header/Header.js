@@ -4,8 +4,7 @@ import { StyledHeader } from './Header.styled.js';
 import { Burger, Menu, HomeLogo, PourPourLogo } from '../../components';
 import { useOnClickOutside } from '../../hooks';
 
-
-export default function Header() {
+export default function Header({ hideHomeLogo }) { // Pass the prop to control visibility
     
     const [open, setOpen] = useState(false);
     const node = useRef();
@@ -13,16 +12,13 @@ export default function Header() {
 
     useOnClickOutside(node, () => setOpen(false));
 
-
-    return(
+    return (
         <StyledHeader>
-        <div className="header-wrapper">
-        <HomeLogo size="3rem"/>
-        <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-        <Menu open={open} setOpen={setOpen} id={menuId} />
-        </div>
-        
-      
+            <div className="header-wrapper">
+                <HomeLogo invisible={hideHomeLogo} /> {/* Pass the prop here */}
+                <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+                <Menu open={open} setOpen={setOpen} id={menuId} />
+            </div>
         </StyledHeader>
     )
 }
