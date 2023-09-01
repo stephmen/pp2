@@ -11,6 +11,8 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-left: auto; // Move the Burger component to the right
+
 `;
 
 const RightAlignedBurger = styled(Burger)`
@@ -26,6 +28,7 @@ const PageTwo = (props) => {
   return (
     <div>
       <HeaderContainer>
+      {/* <Header hideHomeLogo={true}/> */}
         <RightAlignedBurger open={open} setOpen={setOpen} aria-controls={menuId} />
       </HeaderContainer>
       <MobilePage {...props}/>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const MobilePageStyle = styled.div`
   .billet-container {
     position: absolute;
-    top: 20rem; /* Adjust this value for desired vertical position */
+    top: 25rem; /* Adjust this value for desired vertical position */
     left: 0;
     width: 60%;
     display: flex;
