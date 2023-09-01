@@ -16,15 +16,10 @@ export default function Header() {
 
     return(
         <StyledHeader>
-        
         <div className="header-wrapper">
-        {/* <Link href="/" onClick={() => setOpen(!open)}> */}
-        <Link href="/">
         <HomeLogo size="3rem"/>
-        </Link>
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
         <Menu open={open} setOpen={setOpen} id={menuId} />
-        {/* <HomeLogo/> */}
         </div>
         
       

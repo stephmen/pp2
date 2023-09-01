@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { PourPourLogo } from '../components';
+import { PourPourLogo, Header } from '../components';
 import BilletsLion  from '../components/Billets_Lion';
 import {  Burger, Footer, Menu } from '../components'
 import { MainPage }  from '../components/Styled-Component/pageone.styled';
@@ -16,7 +16,8 @@ const PageOne = (props) => {
   return (
     
     <div>
-    <Burger open={open} setOpen={setOpen} aria-controls={menuId} />    
+    <Header />
+    {/* <Burger open={open} setOpen={setOpen} aria-controls={menuId} />     */}
     <Image src="/pp4/index_ordinateur_fond.jpg" alt="image7" fill={true} onClick={() => handleClick('/pp4/index_V1607.jpg')} />
     <BilletsLion />
     <PourPourLogo />

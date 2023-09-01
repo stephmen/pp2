@@ -17,9 +17,9 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: space-between;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 100%;
     margin: 0 auto;
-    /* padding: 2rem 2rem ; */
+    padding: 2rem 2rem ;
   }
 `;
