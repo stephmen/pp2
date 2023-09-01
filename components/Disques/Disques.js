@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Header from "../Header/Header";
 import {
   StyledDisques,
   SyledTitle,
@@ -15,6 +16,7 @@ const Disques = (props) => {
 
   return (
     <Container>
+      <Header />
       <SyledTitle> Nos Albums</SyledTitle>
       <StyledDisques>
         <img className="cd" src="/pourtoutlemondedame.jpg" />

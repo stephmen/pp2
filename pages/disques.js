@@ -1,5 +1,5 @@
 import React from 'react'
-import Disques from "../components/Disques"
+import {Disques, Header} from "../components"
 
 
 
@@ -8,7 +8,8 @@ import Disques from "../components/Disques"
 export default function disques() {
   return (
     <div>
-        <Disques />
+        <Header />
+        <Disques /> 
     </div>
 
   )

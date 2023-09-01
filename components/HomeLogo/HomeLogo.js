@@ -10,7 +10,7 @@ export default function HomeLogo({ invisible }) {
   return (
     <StyledHomeLogo>
       <Link href="/">
-        <img src="/pp4/spectacles/page_spectacles_ordinateur_home.png" alt="" width="50" height="50"/>
+        <img src="/pp4/spectacles/page_spectacles_ordinateur_home.png" alt="" width="40" height="40"/>
       </Link>
     </StyledHomeLogo>
   );
