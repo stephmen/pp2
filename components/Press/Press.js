@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledPress } from "./Press.styled";
+import  Background  from '../BackGround'
 
 const Disque = styled.div`
 background-color: #e6e3d1;
@@ -10,6 +11,7 @@ width: 100%;
 export default function Presse() {
   return (
     <StyledPress>
+      <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
       <div className="container">
         <Disque>
 

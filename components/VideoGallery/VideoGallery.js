@@ -1,10 +1,10 @@
 import React from 'react';
 import { VideoGalleryContainer, Header, Footer, Content, IframeContainer } from './VideoGalleryStyled';
-
+import  Background  from '../BackGround'
 const VideoGallery = () => {
   return (
     <VideoGalleryContainer>
-      
+      <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
       <Content>
         <h2>Dans les nacelles de Pourpour 2018</h2>
         {/* <IframeContainer> */}

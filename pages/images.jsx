@@ -4,6 +4,7 @@ import { useOnClickOutside } from '../hooks';
 import imageGallery from '../components/imageGallery/imageGallery';
 import ImageGallery from "../components/imageGallery/imageGallery";
 import { Header } from "../components";
+import  Background  from '../components/BackGround'
 
 const PageOne = (props) => {
    
@@ -13,6 +14,7 @@ const PageOne = (props) => {
   useOnClickOutside(node, () => setOpen(false));
   return (
     <MainPage>
+    <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
     <Header />
     <div>
 

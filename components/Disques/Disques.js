@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../Header/Header";
+import Background from "../BackGround/BackGround";
 import {
   StyledDisques,
   SyledTitle,
@@ -16,6 +17,7 @@ const Disques = (props) => {
 
   return (
     <Container>
+      <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
       <Header />
       <SyledTitle> Nos Albums</SyledTitle>
       <StyledDisques>
