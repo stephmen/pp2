@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 export const ShowStyle = styled.div`
-/width: 660px;
+/* width: 660px; */
 
-margin: 4rem 2rem 2rem 2rem;
+margin: 4rem 4rem 2rem 4rem;
 display: grid;
 grid-gap: 0px;
 grid: auto / auto / auto / auto
@@ -31,8 +31,8 @@ grid: auto / auto / auto / auto
         index: -1;
 }
 img{
-    grid-area: 6 / 1 ;
-    /* padding: 1rem 2rem ; */
+    grid-area: 6 / 1;
+    margin: 0 auto; /* This will horizontally center the image */
     
 }
 .block{   

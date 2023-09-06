@@ -21,7 +21,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-grow: 1; /* Allow Container to expand and take remaining space */
-  padding-top: 4rem; /* Add padding to push content below the fixed header */
+    padding-top: 4rem; /* Add padding to push content below the fixed header */
 
 `;
 
