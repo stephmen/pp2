@@ -42,10 +42,11 @@ const Disques = (props) => {
           </Link>
         </div>
         <div>
-          <Link href="https://www.facebook.com/Boutiqueloblique/">
-            <img className="Apple" src="/Oblique.jpg" />
+          <Link href="https://fanfarepourpour.bandcamp.com/" target="_blank">
+            <img className="Apple" src="/bandcamp-button-bc-circle-green-64.png" />
           </Link>
         </div>
+        
         <div>
           <Link href="https://music.apple.com/ca/artist/fanfare-pourpour/419642215">
             <img className="Apple" src="/Apple_logo_black.svg.png" />
