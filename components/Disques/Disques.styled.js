@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
 export const StyledDisques = styled.div`
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 20px;
   align-items: center;
+   /* Set a consistent size for child elements */
+   > * {
+    width: 250px; /* Adjust the width as per your requirement */
+    height: 250px; /* Adjust the height as per your requirement */
+  }
 `
   export const SyledTitle = styled.h1`
   display: flexbox;

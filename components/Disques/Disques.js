@@ -26,6 +26,7 @@ const Disques = (props) => {
         <img className="cd" src="/Danse des Breloques.jpg" />
         <img className="cd" src="/Karussel.jpg" />
         <img className="cd" src="/Le Bal.jpg" />
+        <img className="cd" src="/ce-que-nous-sommes.jpeg" />
       </StyledDisques>
 
       <BuyingCD>
