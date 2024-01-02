@@ -8,7 +8,7 @@ import {
   Boutiques,
   BuyingCD,
   Container,
-} from "./Disques.styled";
+} from "./cqns.styled";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -29,6 +29,7 @@ const Disques = (props) => {
         <img className="cd" src="/ce-que-nous-sommes.jpeg" />
       </StyledDisques>
 
+     
       <BuyingCD>
         {/* <p>
           <h1>
