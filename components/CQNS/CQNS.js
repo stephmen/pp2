@@ -17,44 +17,17 @@ const Disques = (props) => {
 
   return (
     <Container>
-      <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
+      <Background src="/pp4/cqns/fond du haut.jpg" alt="image7" />
       <Header />
-      <SyledTitle> Nos Albums</SyledTitle>
+      <SyledTitle> Notre 6e Album, sorti le 4 octobre 2023</SyledTitle>
       <StyledDisques>
-        <img className="cd" src="/pourtoutlemondedame.jpg" />
-        <img className="cd" src="/lapourpour.jpg" />
-        <img className="cd" src="/Danse des Breloques.jpg" />
-        <img className="cd" src="/Karussel.jpg" />
-        <img className="cd" src="/Le Bal.jpg" />
-        <img className="cd" src="/ce-que-nous-sommes.jpeg" />
+        <img  className="cd" src="/pp4/cqns/page_6album_elements_seuls3.png" />
+        
       </StyledDisques>
 
      
-      <BuyingCD>
-        {/* <p>
-          <h1>
-           
-          </h1>
-        </p> */}
-      </BuyingCD>
-      <Boutiques>
-        <div>
-          <Link href="https://actuellecd.com/fr/artiste/fanfarepourpour_/Fanfare_Pourpour">
-            <img className="Dame" src="/actuellelogo.png" />
-          </Link>
-        </div>
-        <div>
-          <Link href="https://fanfarepourpour.bandcamp.com/" target="_blank">
-            <img className="Apple" src="/bandcamp-button-bc-circle-green-64.png" />
-          </Link>
-        </div>
-        
-        <div>
-          <Link href="https://music.apple.com/ca/artist/fanfare-pourpour/419642215">
-            <img className="Apple" src="/Apple_logo_black.svg.png" />
-          </Link>
-        </div>
-      </Boutiques>
+      
+     
     </Container>
   );
 };
