@@ -13,6 +13,9 @@ const Menu = ({ open, setOpen }) => {
       <Link href="/disques">
         Albums
       </Link>
+      <Link href="/cqns">
+        Notre Dernier Disque
+      </Link>
       <Link href="/histoire">
         Histoire
       </Link>
