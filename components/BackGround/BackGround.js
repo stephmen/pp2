@@ -20,3 +20,4 @@ Background.propTypes = {
 };
 
 export default Background;
+
