@@ -1,6 +1,6 @@
 import React from 'react'
 import Press from '../components/Press'
-import Histoire from '../components/Extraitpresse';
+import Extraitpresse from '../components/Extraitpresse';
 import { Header } from '../components'
 import sanityClient from "../client";
 import groq from "groq";
@@ -11,9 +11,9 @@ import groq from "groq";
     
     return(
     <div>
-    <Header />    
-    <Press {...props} />
-    <Histoire {...props} />
+      
+    <Press />
+    <Extraitpresse {...props} />
     </div>
 
 )}
