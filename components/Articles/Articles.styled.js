@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const ArticlesStyle = styled.div`
   .container {
     margin: 2rem 4rem 3rem;
-    background-color: #C7EDF6;
+    background-color: beige;
     opacity: 0.8;
-    padding: rem 6rem ;
+    padding: 3rem 3rem ;
   }
 
   .row {

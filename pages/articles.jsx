@@ -1,32 +1,12 @@
+// ArticlesPage.js
 import React, { useState, useRef } from "react";
-import Image from 'next/image';
 import sanityClient from '../client';
 import groq from 'groq';
 import { useOnClickOutside } from '../hooks';
-import styled from 'styled-components';
-import HomeLogo from "../components/HomeLogo";
+import { PageArticlesArchives, Container } from '../components/Styled-Component/pageArticlesArchives'; // Import the styled component
 import { Header } from '../components';
 import Articles from '../components/Articles' 
-
 import Background from '../components/BackGround';
-import spectaclepng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_prochains_spectacles.png';
-import contactpng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_contact.png';
-
-const PageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Container = styled.div`
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #C7EDF6;
-  padding: 4rem; /* Add padding to create space around the content */
-`;
-
 
 
 const ArticlesPage = (props) => {
@@ -36,21 +16,14 @@ const ArticlesPage = (props) => {
   useOnClickOutside(node, () => setOpen(false));
 
   return (
-    <PageWrapper>
+    <PageArticlesArchives> {/* Use the PageArticlesArchives styled component */}
       <Background src="/pp4/spectacles/page_spectacles_ordinateur_fond solo_2.jpg" alt="image7" /> 
       <Header />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Container> {/* Use the Container styled component */}
       <h1>           Nos Archives et Articles de Journeaux</h1>
-      <Container>
         <Articles {...props} />
-        
       </Container>
-    </PageWrapper>
+    </PageArticlesArchives>
   );
 };
 

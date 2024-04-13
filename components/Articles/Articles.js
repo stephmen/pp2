@@ -32,7 +32,7 @@ const Articles = (props) => {
             </Link>
           ) : null
           )}
-           <ExtraitDePresseComponent />
+           {/* <ExtraitDePresseComponent /> */}
       </div>
     </ArticlesStyle>
   );

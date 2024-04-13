@@ -31,10 +31,7 @@ const VideoGallery = () => {
         <iframe src="https://player.vimeo.com/video/61775378?portrait=0&byline=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         <iframe src="https://player.vimeo.com/video/61773861?portrait=0&byline=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         {/* </IframeContainer> */}
-        <h2>La Pourpour à Guadalajara, Mexique 2012</h2>
-        {/* <IframeContainer> */}
-        <iframe src="https://player.vimeo.com/video/434240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        {/* </IframeContainer> */}
+    
       </Content>
     </VideoGalleryContainer>
   );
