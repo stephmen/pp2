@@ -24,8 +24,8 @@ export const ArticlesStyle = styled.div`
     display: flex;
     justify-content: center;
     
-    font-size: 1.2rem;
-    color: #dc143c
+    font-size: 1rem;
+    /* color: #dc143c */
    ;
   }
 

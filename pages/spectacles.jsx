@@ -58,6 +58,7 @@ export const getStaticProps = async () => {
   const posts = await client.fetch(groq`
     *[_type == "spectacle" && publishedAt > $currentDate] | order(publishedAt asc)
   `, { currentDate });
+ console.log('Fetched posts:', posts); // Log the fetched posts
 
   return {
     props: { posts },

@@ -51,15 +51,16 @@ const ArticlesPage = (props) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const client = sanityClient.withConfig({ apiVersion: '2021-06-07' });
   
   // Get the current date in ISO8601 format (e.g., "2023-09-20T00:00:00Z")
   const currentDate = new Date().toISOString();
   
   const posts = await client.fetch(groq`
-    *[_type == "articles" && publishedAt < $currentDate] | order(publishedAt asc)
+    *[_type == "article" && publishedAt < $currentDate] | order(publishedAt desc)
   `, { currentDate });
+  console.log('Fetched posts:', posts); // Log the fetched posts
 
   return {
     props: { posts },

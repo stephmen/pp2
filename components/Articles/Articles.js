@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { ArticlesStyle } from './Articles.styled';
 import { ExtraitDePresseComponent } from './ExtraitDePresseComponent'
+import Background from "../BackGround/BackGround";
 import Image from 'next/image';
 
 const Articles = (props) => {
@@ -14,23 +15,23 @@ const Articles = (props) => {
 
   return (
     <ArticlesStyle>
+    <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
+
       <div className='container'>
-        {props.posts.map(({ _id, title = '', slug = '', publishedAt = '' }) =>
+        {props.posts.map(({ _id, title = '', auteur = '', slug = '', source, publishedAt = '', endroit = '' }) =>
           slug ? (
-            <Link key={_id} href='/spectacles/[slug]' as={`/spectacles/${slug.current}`}>
+            <Link key={_id} href='/articles/[slug]' as={`/articles/${slug.current}`}>
               <div key={_id} className='row'>
-                <div className='date'>Le {new Date(publishedAt).toLocaleDateString('fr-FR', options)}</div>
-                <div className='location'>{title}</div>
-                <div className='title'>
-                  Info
-                </div>
+                <div className='info'>{title}</div>
+                <div className='info'>Par {auteur},  {source}</div>
+                <div className='date'>Article Paru le: {new Date(publishedAt).toLocaleDateString('fr-FR', options)}</div>
+                
 
               </div>
 
             </Link>
           ) : null
           )}
-            <h1>TEST</h1>
            <ExtraitDePresseComponent />
       </div>
     </ArticlesStyle>

@@ -29,10 +29,8 @@ const Post = (props) => {
     mainImage,
     body = [],
     publishedAt,
-    nocivique,
-    rue,
-    ville,
-    endroit,
+    auteur,
+    source,
   } = {...props}
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return (
@@ -43,11 +41,15 @@ const Post = (props) => {
     </BackgroundImage>
     <ShowStyle>
       <h1 className="title">{title}  </h1>
-      <h2 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h2>
-      <h2 className="endroit">{endroit}  </h2>
+      <h1 className="title">Par {auteur}, {source} </h1>
+     
 
-      <h2 className="adress">{nocivique} {rue} {ville}</h2>
+      
+      <h2 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h2>
+      
+
       <img src={urlFor(mainImage).width(550).url()}/>
+      
       {/* <div className="block"> */}
       <BlockContent 
         className="block"
@@ -62,7 +64,7 @@ const Post = (props) => {
 }
 
 const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
-const query = groq`*[_type == "spectacle" && slug.current == $slug][0]`
+const query = groq`*[_type == "article" && slug.current == $slug][0]`
 Post.getInitialProps = async function (context) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.query
