@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { StyledPress } from "./Press.styled";
 import  Background  from '../BackGround'
+import { Histoire } from "../Histoire";
 
 const Disque = styled.div`
 background-color: #e6e3d1;
@@ -407,6 +408,8 @@ export default function Presse() {
         </p>
         </Disque>
       </div>
+      {/* <Histoire /> */}
     </StyledPress>
+    
   );
 }

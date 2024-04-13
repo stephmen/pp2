@@ -18,19 +18,16 @@ const PageWrapper = styled.div`
 `;
 
 const Container = styled.div`
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-grow: 1; /* Allow Container to expand and take remaining space */
-    padding-top: 4rem; /* Add padding to push content below the fixed header */
-
+  background-color: #C7EDF6;
+  padding: 4rem; /* Add padding to create space around the content */
 `;
 
-const ResponsiveImage = styled(Image)`
-  max-width: 100%;
-  height: auto;
-`;
+
 
 const ArticlesPage = (props) => {
   const [open, setOpen] = useState(false);
@@ -42,10 +39,16 @@ const ArticlesPage = (props) => {
     <PageWrapper>
       <Background src="/pp4/spectacles/page_spectacles_ordinateur_fond solo_2.jpg" alt="image7" /> 
       <Header />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1>           Nos Archives et Articles de Journeaux</h1>
       <Container>
-        <ResponsiveImage src={spectaclepng} alt="image7" />
         <Articles {...props} />
-        <ResponsiveImage src={contactpng} alt="" />
+        
       </Container>
     </PageWrapper>
   );
