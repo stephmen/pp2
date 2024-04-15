@@ -10,7 +10,7 @@ const Disques = (props) => {
       <Container>
         <Header />
         <StyledDisques>
-          <img src="/pp4/cqns/page_6album_elements_seuls3.png" alt="album-cover" />
+          <img src="/pp4/cqns/page_6album_elements_seuls5.png" alt="album-cover" />
         </StyledDisques>
       </Container>
     </>
