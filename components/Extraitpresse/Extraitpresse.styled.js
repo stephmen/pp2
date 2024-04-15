@@ -5,11 +5,11 @@ export const Titre = styled.h1`
 `;
 
 export const Main = styled.div`
-  margin: 0rem;
+  margin: 1rem ;
   margin-top: 0rem;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   justify-content: left;
   background-color: beige; /* Set the background color to beige */
   padding: 1rem; Add padding for better readability
@@ -20,6 +20,6 @@ export const Main = styled.div`
   }
 
   @media only screen and (min-width: 845px) {
-    margin: 0rem 18rem;
+    margin: 0rem 16rem;
   }
 `;
