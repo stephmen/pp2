@@ -26,7 +26,7 @@ export const ExtraitDePresseComponent = () => {
   return (
     <Container>
       <Centered>
-      Une belle tournée est en préparation! Calendrier saison estivale 2024, à venir! 
+      Une belle tournée estivale 2024 ! 
         {/* <Quote>&laquo;</Quote>
         ...Artistes inclassables dont le noyau
       </Centered>
