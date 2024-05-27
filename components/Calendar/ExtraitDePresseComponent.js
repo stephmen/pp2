@@ -27,25 +27,6 @@ export const ExtraitDePresseComponent = () => {
     <Container>
       <Centered>
       Une belle tournée estivale 2024 ! 
-        {/* <Quote>&laquo;</Quote>
-        ...Artistes inclassables dont le noyau
-      </Centered>
-      <Centered>
-        s&apos;est formé il y a plus de 30 ans,
-      </Centered>
-      <Centered>
-        <Quote className="c4">La fanfare Pourpour</Quote>
-        sillonne le monde
-      </Centered>
-      <Centered>
-        avec une joie bouillonnante
-      </Centered>
-      <Centered>
-        et une foisonnante audace...
-        <Quote>&raquo;</Quote>
-      </Centered>
-      <Centered>
-        -Coup de coeur francophone, 2020 */}
       </Centered>
     </Container>
   );
