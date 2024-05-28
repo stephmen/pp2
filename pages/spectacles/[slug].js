@@ -1,7 +1,5 @@
-// [slug].js
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
-// import Image from 'next/image'
 import Image from 'next/legacy/image';
 import BlockContent from '@sanity/block-content-to-react'
 import sanityClient from '../../client'
@@ -34,29 +32,31 @@ const Post = (props) => {
     ville,
     endroit,
   } = {...props}
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  return (
-      <div>
-    <Header/>
-    <BackgroundImage>
-    <Image className="fond" src="/pp4/spectacles/page2_fond_solo_spectacles1.png" alt="image7" layout='fill' objectFit='cover' /> 
-    </BackgroundImage>
-    <ShowStyle>
-      <h1 className="title">{title}  </h1>
-      <h2 className="date">{new Date(publishedAt).toLocaleDateString('fr-FR',options)}</h2>
-      <h2 className="endroit">{endroit}  </h2>
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const timeOptions = { hour: '2-digit', minute: '2-digit' };
 
-      <h2 className="adress">{nocivique} {rue} {ville}</h2>
-      <img src={urlFor(mainImage).width(550).url()}/>
-      {/* <div className="block"> */}
-      <BlockContent 
-        className="block"
-        blocks={body}
-        // imageOptions={{ w: 320, h: 240, fit: 'max' }}
-        {...client.config()}
-      />
-      {/* </div> */}
-    </ShowStyle>
+  return (
+    <div>
+      <Header/>
+      <BackgroundImage>
+        <Image className="fond" src="/pp4/spectacles/page2_fond_solo_spectacles1.png" alt="image7" layout='fill' objectFit='cover' /> 
+      </BackgroundImage>
+      <ShowStyle>
+        <h1 className="title">{title}</h1>
+        <h2 className="date">
+          {new Date(publishedAt).toLocaleDateString('fr-FR', dateOptions)} 
+          {' '}à{' '}
+          {new Date(publishedAt).toLocaleTimeString('fr-FR', timeOptions)}
+        </h2>
+        <h2 className="endroit">{endroit}</h2>
+        <h2 className="adress">{nocivique} {rue} {ville}</h2>
+        <img src={urlFor(mainImage).width(550).url()}/>
+        <BlockContent 
+          className="block"
+          blocks={body}
+          {...client.config()}
+        />
+      </ShowStyle>
     </div>
   )
 }
@@ -64,7 +64,6 @@ const Post = (props) => {
 const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
 const query = groq`*[_type == "spectacle" && slug.current == $slug][0]`
 Post.getInitialProps = async function (context) {
-  // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.query
   return await client.fetch(query, { slug })
 }
