@@ -1,18 +1,14 @@
 import styled from 'styled-components';
 
-export const Titre = styled.h1`
-  /* add any styles you want for the heading */
-`;
-
 export const Main = styled.div`
-  margin: 1rem ;
-  margin-top: 0rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: left;
   background-color: beige; /* Set the background color to beige */
-  padding: 1rem; Add padding for better readability
 
   @media only screen and (min-width: 390px) and (max-width: 844px) {
     margin: 2rem;

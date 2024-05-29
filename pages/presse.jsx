@@ -1,10 +1,8 @@
 import React from 'react';
 import Press from '../components/Press';
 import Extraitpresse from '../components/Extraitpresse';
-import { Header } from '../components';
 import sanityClient from "../client";
 import groq from "groq";
-  
 
 const Presse = (props) => {
   return (
