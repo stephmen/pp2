@@ -30,7 +30,7 @@ const Calendar = (props) => {
             </Link>
           ) : null
           )}
-           <ExtraitDePresseComponent />
+           {/* <ExtraitDePresseComponent /> */}
       </div>
     </CalendarStyle>
   );
