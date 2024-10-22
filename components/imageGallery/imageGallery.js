@@ -11,7 +11,19 @@ const GalleryContainer = styled.div`
   padding: 10rem;
   margin: 0 auto; /* Add this */
   max-width: 1200px; /* Add this */
-  style={{ objectFit: 'cover', objectPosition: 'center' }}
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    grid-gap: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    padding-top: 8rem; /* Add more padding from the top */
+
+  }
+
 `;
 
 const ImageOverlay = styled.div`
@@ -24,6 +36,10 @@ const ImageOverlay = styled.div`
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const OverlayImage = styled(Image)`

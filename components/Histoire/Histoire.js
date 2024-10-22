@@ -5,7 +5,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import sanityClient from '../../client'
 import  Background  from '../BackGround'
 import Header from "../Header/Header";
-import { Text, Titre, Main } from "./History.styled.js";
+import { Text, Titre, Main, ImageContainer } from "./History.styled.js";
 
 const client = sanityClient.withConfig({apiVersion: '2021-06-07'})
 
@@ -27,14 +27,18 @@ const Histoire = (props) => {
 
     <Titre> {props.posts[0].title}</Titre>
     <BlockContent blocks={props.posts[0].body[0]}/>
-    <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={300} width={425} />
+    <ImageContainer>    
+      <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={300} width={425} />
+    </ImageContainer>
     <BlockContent blocks={props.posts[0].body[1]}/>
     <BlockContent blocks={props.posts[0].body[2]}/>
     <BlockContent blocks={props.posts[0].body[3]}/>
     <BlockContent blocks={props.posts[0].body[4]}/>
     <BlockContent blocks={props.posts[0].body[5]}/>
     <BlockContent blocks={props.posts[0].body[6]}/>
-    <Image src={urlFor(props.posts[0].imagesGallery[1]).url()} alt="0" height={300} width={470} />
+    <ImageContainer>
+          <Image src={urlFor(props.posts[0].imagesGallery[1]).url()} alt="0" height={300} width={470} />
+    </ImageContainer>
     <BlockContent blocks={props.posts[0].body[7]}/>
     <BlockContent blocks={props.posts[0].body[8]}/>
     <BlockContent blocks={props.posts[0].body[9]}/>
