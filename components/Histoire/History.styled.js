@@ -14,6 +14,11 @@ export const Main = styled.div`
   justify-content: center;
   background: beige ;
 
+  @media only screen and (max-width: 389px) {
+    margin: 1rem;
+    margin-top: 3rem;
+  }
+
   @media only screen and (min-width: 390px) and (max-width: 844px) {
     margin: 2rem;
     margin-top: 5rem

@@ -28,19 +28,40 @@ const Histoire = (props) => {
     <Titre> {props.posts[0].title}</Titre>
     <BlockContent blocks={props.posts[0].body[0]}/>
     <ImageContainer>    
-      <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={300} width={425} />
+      <Image src={urlFor(props.posts[0].imagesGallery[0]).url()} alt="0" height={300} width={425} style={{
+    maxWidth: '100%', 
+    height: 'auto', 
+    objectFit: 'contain', // Adjust to 'cover' or 'fill' if needed
+    display: 'block',
+    margin: '0 auto'
+  }} />
     </ImageContainer>
     <BlockContent blocks={props.posts[0].body[1]}/>
     <BlockContent blocks={props.posts[0].body[2]}/>
     <BlockContent blocks={props.posts[0].body[3]}/>
     <BlockContent blocks={props.posts[0].body[4]}/>
     <BlockContent blocks={props.posts[0].body[5]}/>
+      <ImageContainer>
+            <Image src={urlFor(props.posts[0].imagesGallery[2]).url()} alt="0" height={300} width={470} style={{
+      maxWidth: '100%', 
+      height: 'auto', 
+      objectFit: 'contain', // Adjust to 'cover' or 'fill' if needed
+      display: 'block',
+      margin: '0 auto'
+    }} />
+      </ImageContainer>
     <BlockContent blocks={props.posts[0].body[6]}/>
-    <ImageContainer>
-          <Image src={urlFor(props.posts[0].imagesGallery[1]).url()} alt="0" height={300} width={470} />
-    </ImageContainer>
     <BlockContent blocks={props.posts[0].body[7]}/>
     <BlockContent blocks={props.posts[0].body[8]}/>
+    <ImageContainer>
+          <Image src={urlFor(props.posts[0].imagesGallery[1]).url()} alt="0" height={300} width={470} style={{
+    maxWidth: '100%', 
+    height: 'auto', 
+    objectFit: 'contain', // Adjust to 'cover' or 'fill' if needed
+    display: 'block',
+    margin: '0 auto'
+  }} />
+    </ImageContainer>
     <BlockContent blocks={props.posts[0].body[9]}/>
     <BlockContent blocks={props.posts[0].body[10]}/>
     <BlockContent blocks={props.posts[0].body[11]}/>
