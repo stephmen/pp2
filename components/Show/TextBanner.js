@@ -10,39 +10,56 @@ const TextBannerWrapper = styled.div`
 `;
 
 const TitleSmall = styled.div`
-  font-size: 2.6rem; /* Increased size for "prochains" */
+  font-size: 5vw; /* Use viewport width to make text resize proportionally */
   font-weight: 600;
   text-transform: lowercase;
-  /* margin-bottom: 0.1rem; */
   line-height: 1;
   margin-left: 6rem; /* Added left margin for slight indentation */
+
+  @media (max-width: 768px) {
+    font-size: 8vw; /* Adjust font size for smaller screens */
+    margin-left: 2rem; /* Adjust margin for smaller screens */
+  }
 `;
 
 const TitleLarge = styled.div`
-  font-size: 3.5rem;
+  font-size: 7vw;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
-  margin-bottom: -0.5rem; Reduced spacing between "SPECTACLES" and subtitle
+  margin-bottom: -0.5rem;
   letter-spacing: 0.05em;
-    margin-left: 6rem; /* Added left margin for slight indentation */
+  margin-left: 6rem; /* Added left margin for slight indentation */
 
+  @media (max-width: 768px) {
+    font-size: 10vw; /* Adjust font size for smaller screens */
+    margin-left: 2rem; /* Adjust margin for smaller screens */
+  }
 `;
 
 const Subtitle = styled.div`
-  font-size: 2.3rem; /* Increased size for the subtitle */
-  font-weight: bold; /* Made it bold */
+  font-size: 4vw;
+  font-weight: bold;
   text-transform: lowercase;
   letter-spacing: 0.07em;
-  color: black; /* Kept subtitle in black */
+  color: black;
+
+  @media (max-width: 768px) {
+    font-size: 4.3vw; /* Adjust font size for smaller screens */
+  }
 `;
+
 const Subtitle2 = styled.div`
-  font-size: 2rem; /* Increased size for the subtitle */
-  font-weight: bold; /* Made it bold */
+  font-size: 4vw;
+  font-weight: bold;
   text-transform: lowercase;
   letter-spacing: 0.07em;
   margin-top: 2rem;
-  color: white; /* Kept subtitle in black */
+  color: white;
+
+  @media (max-width: 768px) {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
 `;
 
 const TextBanner = () => {
