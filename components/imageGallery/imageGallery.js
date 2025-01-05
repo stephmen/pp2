@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const GalleryContainer = styled.div`
@@ -11,19 +11,12 @@ const GalleryContainer = styled.div`
   padding: 10rem;
   margin: 0 auto; /* Add this */
   max-width: 1200px; /* Add this */
+  style={{ objectFit: 'cover', objectPosition: 'center' }}
 
   @media (max-width: 768px) {
-    padding: 2rem;
-    grid-gap: 2rem;
+    padding: 5rem 2.5rem; /* Adjust padding for smaller screens */
+    grid-gap: 1rem; /* Adjust grid gap for smaller screens */
   }
-
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    justify-content: center;
-    padding-top: 8rem; /* Add more padding from the top */
-
-  }
-
 `;
 
 const ImageOverlay = styled.div`
@@ -36,10 +29,7 @@ const ImageOverlay = styled.div`
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+  
 `;
 
 const OverlayImage = styled(Image)`
@@ -49,9 +39,28 @@ const OverlayImage = styled(Image)`
 
 function ImageGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // Check screen size and update the state
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    // Check screen size on initial render
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleClick = (src) => {
-    setSelectedImage(src);
+    if (!isSmallScreen) {
+      setSelectedImage(src);
+    }
   };
 
   const handleClose = () => {
@@ -62,13 +71,19 @@ function ImageGallery() {
     <>
       <GalleryContainer>
         <Image src="/images/image1.jpg" width={300} height={200} onClick={() => handleClick('/images/image1.jpg')} />
-        <Image src="/images/image2.jpg" width={300} height={200} onClick={() => handleClick('/images/image2.jpg')} />
         <Image src="/images/image3.jpg" width={300} height={200} onClick={() => handleClick('/images/image3.jpg')} />
-        <Image src="/images/image5.jpg" width={300} height={200} onClick={() => handleClick('/images/image5.jpg')} />
-        <Image src="/images/image6.jpg" width={300} height={200} onClick={() => handleClick('/images/image6.jpg')} />
-        <Image src="/images/image7.jpg" width={300} height={200} onClick={() => handleClick('/images/image7.jpg')} />
         <Image src="/images/image8.jpg" width={300} height={200} onClick={() => handleClick('/images/image8.jpg')} />
         <Image src="/images/image9.jpg" width={300} height={200} onClick={() => handleClick('/images/image9.jpg')} />
+        <Image src="/images/image11.jpg" width={300} height={200} onClick={() => handleClick('/images/image11.jpg')} />
+        <Image src="/images/image10.jpg" width={300} height={200} onClick={() => handleClick('/images/image10.jpg')} />
+        <Image src="/images/image12.jpg" width={300} height={200} onClick={() => handleClick('/images/image12.jpg')} />
+        <Image src="/images/image13.jpg" width={300} height={200} onClick={() => handleClick('/images/image13.jpg')} />
+        <Image src="/images/image14.jpg" width={300} height={200} onClick={() => handleClick('/images/image14.jpg')} />
+        <Image src="/images/image15.jpg" width={300} height={200} onClick={() => handleClick('/images/image15.jpg')} />
+        <Image src="/images/image16.jpg" width={300} height={200} onClick={() => handleClick('/images/image16.jpg')} />
+        <Image src="/images/image17.jpg" width={300} height={200} onClick={() => handleClick('/images/image17.jpg')} />
+        <Image src="/images/image18.jpg" width={300} height={200} onClick={() => handleClick('/images/image18.jpg')} />
+        <Image src="/images/image19.jpg" width={300} height={200} onClick={() => handleClick('/images/image19.jpg')} />
       </GalleryContainer>
       {selectedImage && (
         <ImageOverlay onClick={handleClose}>
