@@ -1,1 +1,2 @@
-export { default } from './Show';
+// export { Show } from './Show';
+export { default } from './TextBanner';

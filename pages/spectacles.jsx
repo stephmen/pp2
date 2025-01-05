@@ -6,6 +6,7 @@ import { useOnClickOutside } from '../hooks';
 import styled from 'styled-components';
 import HomeLogo from "../components/HomeLogo";
 import { Calendar, Header } from '../components';
+import TextBanner from "../components/Show/TextBanner";
 import Background from '../components/BackGround';
 import spectaclepng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_prochains_spectacles.png';
 import contactpng from '../public/pp4/spectacles/typo_page_spectacles_ordinateur_contact.png';
@@ -41,7 +42,8 @@ const Spectacles = (props) => {
       <Background src="/pp4/spectacles/page_spectacles_ordinateur_fond solo_2.jpg" alt="image7" /> 
       <Header />
       <Container>
-        <ResponsiveImage src={spectaclepng} alt="image7" />
+        <TextBanner />
+        {/* <ResponsiveImage src={spectaclepng} alt="image7" /> */}
         <Calendar {...props} />
         <ResponsiveImage src={contactpng} alt="" />
       </Container>
@@ -54,7 +56,8 @@ Spectacles.getInitialProps = async () => {
   const currentDate = new Date().toISOString();
   
   const posts = await client.fetch(groq`
-    *[_type == "spectacle" && publishedAt > $currentDate] | order(publishedAt asc)
+    *[_type == "spectacle"] | order(publishedAt desc)
+    // *[_type == "spectacle" && publishedAt > $currentDate] | order(publishedAt asc)
   `, { currentDate });
 
   console.log('Fetched posts:', posts); // Log the fetched posts

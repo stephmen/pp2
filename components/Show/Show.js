@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Link from 'next/link'
+import TextBanner from "./TextBanner";
 import sanityClient from '../../client'
 import groq from 'groq'
 import { ThemeProvider } from '../';
@@ -30,8 +30,8 @@ const Show = (props) => {
     </header>
     <LesAmis size="100%"/>
     <Main >
+   <TextBanner />
     
-   
     <Calendar {...props} />
    
     </Main>
