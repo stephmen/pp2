@@ -68,7 +68,7 @@ const TextBanner = () => {
       <TitleSmall>prochains</TitleSmall>
       <TitleLarge>SPECTACLES</TitleLarge>
       <Subtitle>près de chez vous... ou presque :</Subtitle>
-      <Subtitle2>Merci à tous ceux qui passé nous voir en 2024</Subtitle2>
+      <Subtitle2>Merci à tous ceux qui sont passé nous voir en 2024</Subtitle2>
     </TextBannerWrapper>
   );
 };
