@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const ShowStyle = styled.div`
   /* Container styles for centering */
-  margin: 0 auto;
+   /* Container styles for centering and positioning */
+   margin: 6rem auto 0 auto; /* Adds top margin to push the box down */
   max-width: 800px; /* Adjust this value as needed for the box width */
   padding: 2rem; /* Adds padding inside the box */
   background-color: #ffffff; /* Optional: set a background color for the box */
