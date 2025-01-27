@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
 export const ShowStyle = styled.div`
-  /* Default styles for desktop */
-  margin: 4rem 4rem 2rem 4rem;
+  /* Container styles for centering */
+  margin: 0 auto;
+  max-width: 800px; /* Adjust this value as needed for the box width */
+  padding: 2rem; /* Adds padding inside the box */
+  background-color: #ffffff; /* Optional: set a background color for the box */
+  border-radius: 1rem; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visual appeal */
+
   display: grid;
   grid-gap: 0px;
   grid-template-areas: 
@@ -14,7 +20,7 @@ export const ShowStyle = styled.div`
     "image";
 
   .title {
-    padding-top: 5rem;
+    padding-top: 2rem;
     grid-area: title;
   }
   .endroit {
@@ -32,7 +38,7 @@ export const ShowStyle = styled.div`
   }
   img {
     grid-area: image;
-    margin: 0 auto; /* This will horizontally center the image */
+    margin: 1rem auto; /* Centers the image and adds vertical spacing */
   }
   .block {   
     grid-area: block;
@@ -40,20 +46,14 @@ export const ShowStyle = styled.div`
 
   /* Media queries for mobile */
   @media (max-width: 768px) {
-    margin: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 1rem; /* Reduced margin for smaller screens */
+    max-width: 100%; /* Ensure the box doesn't overflow */
+    padding: 1rem; /* Adjust padding for mobile */
 
     .title, .endroit, .adress, .date, img, .block {
       width: 100%;
-      max-width: 100%; /* Ensure the content doesn't overflow */
-      padding: 0 1rem; /* Add padding to ensure equal margins */
+      padding: 0.5rem; /* Adjust inner padding */
       box-sizing: border-box;
     }
-
-    img {
-      padding: 0; /* Remove padding from the image itself */
-    }
   }
-`
+`;
