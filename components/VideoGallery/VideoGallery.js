@@ -6,10 +6,14 @@ const VideoGallery = () => {
     <VideoGalleryContainer>
       <Background src="/pp4/histoire/page_histoire_fond.jpg" alt="image7" />
       <Content>
+        <h2>Un air de fanfare, un pas de deux  2024</h2>
+        <iframe src="https://player.vimeo.com/video/1014384305?portrait=0&byline=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+
         <h2>Dans les nacelles de Pourpour 2018</h2>
-        {/* <IframeContainer> */}
+    
         <iframe src="https://player.vimeo.com/video/303897944?portrait=0&byline=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        {/* </IframeContainer> */}
+   
 
         {/* <h2> Dans une rulle ...</h2>
         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffanfare.pourpour%2Fposts%2Fpfbid0PDiGHdiewQUx8rbkFMhPmXygETdiEG8GgqECKkeT6GyAq8hLtbJitz83ha3kydx4l&show_text=true&width=500" width="500" height="373" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> */}
