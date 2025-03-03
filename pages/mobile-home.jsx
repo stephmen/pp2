@@ -20,11 +20,12 @@ const RightAlignedBurger = styled(Burger)`
 
 const StyledImageContainer = styled.div`
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  /* bottom: 40%; */
+  /* width: 100%; */
+  padding-left: 1rem;
   display: flex;
   justify-content: center;
-  transform: translateY(-6%); /* Adjusted value to move the image higher */
+  /* /transform: translateY(10%,-6%); Adjusted value to move the image higher */ */
 `;
 
 const StyledImage = styled.img`
