@@ -22,13 +22,25 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-grow: 1; /* Allow Container to expand and take remaining space */
-    padding-top: 4rem; /* Add padding to push content below the fixed header */
-
+  padding-top: 4rem; /* Add padding to push content below the fixed header */
 `;
 
 const ResponsiveImage = styled(Image)`
   max-width: 100%;
   height: auto;
+`;
+
+const StyledImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+const StyledImage = styled.img`
+  width: 50%; /* Adjusted width to make the image larger */
+  height: auto;
+  margin-left: 15rem;
+  margin-bottom: 2rem; /* Add some space below the image */
 `;
 
 const Spectacles = (props) => {
@@ -43,7 +55,11 @@ const Spectacles = (props) => {
       <Header />
       <Container>
         <TextBanner />
-        {/* <ResponsiveImage src={spectaclepng} alt="image7" /> */}
+        <StyledImageContainer>
+          <a href="https://www.grandprix.artsmontreal.org/nos-finalistes/fanfare-pourpour/" target="_blank" rel="noopener noreferrer">
+            <StyledImage src="/cam2024/CAM_fanfare_pourpour_publication.png" alt="CAM fanfare pourpour publication" />
+          </a>
+        </StyledImageContainer>
         <Calendar {...props} />
         <ResponsiveImage src={contactpng} alt="" />
       </Container>

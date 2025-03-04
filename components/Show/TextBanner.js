@@ -40,7 +40,7 @@ const TitleLarge = styled.div`
 const Subtitle = styled.div`
   font-size: 4vw;
   font-weight: bold;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   letter-spacing: 0.07em;
   color: black;
 
@@ -52,7 +52,7 @@ const Subtitle = styled.div`
 const Subtitle2 = styled.div`
   font-size: 4vw;
   font-weight: bold;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   letter-spacing: 0.07em;
   margin-top: 2rem;
   color: white;
@@ -65,10 +65,13 @@ const Subtitle2 = styled.div`
 const TextBanner = () => {
   return (
     <TextBannerWrapper>
-      <TitleSmall>prochains</TitleSmall>
-      <TitleLarge>SPECTACLES</TitleLarge>
-      <Subtitle>près de chez vous... ou presque :</Subtitle>
-      <Subtitle2>Merci à tous ceux qui sont passé nous voir en 2024</Subtitle2>
+      {/* <TitleSmall>prochains</TitleSmall>
+      <TitleLarge>SPECTACLES</TitleLarge> */}
+      {/* <Subtitle>près de chez vous... ou presque :</Subtitle>
+      <Subtitle2>Merci à tous ceux qui sont passé nous voir en 2024</Subtitle2> */}
+      <Subtitle>Une belle nouvelle!</Subtitle>
+      <Subtitle2>C'est extraordinaire, la fanfare Pourpour est finaliste au 39e Grand prix du Conseil des arts de Montréal!
+      En votant en grand nombre pour la fanfare Pourpour au lien suivant, vous nous offrez la chance de remporter le Grand prix et le prix du public :</Subtitle2>
     </TextBannerWrapper>
   );
 };
