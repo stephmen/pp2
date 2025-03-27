@@ -19,18 +19,23 @@ const RightAlignedBurger = styled(Burger)`
 `;
 
 const StyledImageContainer = styled.div`
-  position: absolute;
-  /* bottom: 40%; */
-  /* width: 100%; */
-  padding-left: 1rem;
+  position: absolute; /* Position the container at the bottom */
+  bottom: 0; /* Align it to the bottom of the screen */
+  width: 100%;
   display: flex;
   justify-content: center;
-  /* /transform: translateY(10%,-6%); Adjusted value to move the image higher */ */
+  z-index: 1; /* Ensure the image is above other elements */
+  margin-top: 0; /* Remove any top margin */
+`;
+
+const StyledImageLink = styled.a`
+  display: inline-block;
 `;
 
 const StyledImage = styled.img`
-  width: 50%; /* Adjusted width to make the image larger */
+  width: 39%; /* Adjusted width to make the image larger */
   height: auto;
+  padding 0 7rem;
 `;
 
 const PageTwo = (props) => {
@@ -46,13 +51,13 @@ const PageTwo = (props) => {
         <RightAlignedBurger open={open} setOpen={setOpen} aria-controls={menuId} />
       </HeaderContainer>
       <MobilePage {...props} />
+      <StyledImageContainer>
+        <StyledImageLink href="https://www.grandprix.artsmontreal.org/nos-finalistes/fanfare-pourpour/" target="_blank" rel="noopener noreferrer">
+          <StyledImage src="/cam2024/CAM_fanfare_pourpour_publication.png" alt="CAM fanfare pourpour publication" />
+        </StyledImageLink>
+      </StyledImageContainer>
       <Menu open={open} setOpen={setOpen} id={menuId} />
       <Footer />
-      <StyledImageContainer>
-        <a href="https://www.grandprix.artsmontreal.org/nos-finalistes/fanfare-pourpour/" target="_blank" rel="noopener noreferrer">
-          <StyledImage src="/cam2024/CAM_fanfare_pourpour_publication.png" alt="CAM fanfare pourpour publication" />
-        </a>
-      </StyledImageContainer>
     </div>
   );
 };
