@@ -70,7 +70,7 @@ const TextBanner = () => {
       {/* <Subtitle>près de chez vous... ou presque :</Subtitle>
       <Subtitle2>Merci à tous ceux qui sont passé nous voir en 2024</Subtitle2> */}
       <Subtitle>Une belle nouvelle!</Subtitle>
-      <Subtitle2>C'est extraordinaire, la fanfare Pourpour est finaliste au 39e Grand prix du Conseil des arts de Montréal!
+      <Subtitle2>C&apos;est extraordinaire, la fanfare Pourpour est finaliste au 39e Grand prix du Conseil des arts de Montréal!
       En votant en grand nombre pour la fanfare Pourpour au lien suivant, vous nous offrez la chance de remporter le Grand prix et le prix du public :</Subtitle2>
     </TextBannerWrapper>
   );
