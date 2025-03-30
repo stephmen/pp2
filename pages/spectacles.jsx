@@ -32,15 +32,19 @@ const ResponsiveImage = styled(Image)`
 
 const StyledImageContainer = styled.div`
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  width: 100%; /* Ensure the container spans the full width */
+  position: relative; /* Ensure proper positioning within the parent */
+  margin: 0 auto; /* Center the container itself if needed */
+  text-align: center; /* Ensure text alignment doesn't affect centering */
 `;
 
 const StyledImage = styled.img`
   width: 50%; /* Adjusted width to make the image larger */
   height: auto;
-  margin-left: 15rem;
-  margin-bottom: 2rem; /* Add some space below the image */
+  margin: 0 auto; /* Ensure the image itself is centered */
+  display: block; /* Ensure the image behaves as a block-level element */
 `;
 
 const Spectacles = (props) => {
