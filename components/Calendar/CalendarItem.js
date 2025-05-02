@@ -6,7 +6,7 @@ const CalendarItem = ({ publishedAt, endroit }) => {
     <div className="row">
       <div className="date">{new Date(publishedAt).toLocaleDateString('fr-FR', options)}</div>
       <div className="location">{endroit}</div>
-      <div className="info">Plus d'infos</div>
+      <div className="info">Plus d&apos;infos</div>
     </div>
   );
 };
