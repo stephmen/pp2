@@ -59,11 +59,11 @@ const Spectacles = (props) => {
       <Header />
       <Container>
         <TextBanner />
-        <StyledImageContainer>
+        {/* <StyledImageContainer>
           <a href="https://www.grandprix.artsmontreal.org/nos-finalistes/fanfare-pourpour/" target="_blank" rel="noopener noreferrer">
             <StyledImage src="/cam2024/CAM_fanfare_pourpour_publication.png" alt="CAM fanfare pourpour publication" />
           </a>
-        </StyledImageContainer>
+        </StyledImageContainer> */}
         <Calendar {...props} />
         <ResponsiveImage src={contactpng} alt="" />
       </Container>

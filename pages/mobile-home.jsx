@@ -52,9 +52,9 @@ const PageTwo = (props) => {
       </HeaderContainer>
       <MobilePage {...props} />
       <StyledImageContainer>
-        <StyledImageLink href="https://www.grandprix.artsmontreal.org/nos-finalistes/fanfare-pourpour/" target="_blank" rel="noopener noreferrer">
+        {/* <StyledImageLink href="https://www.grandprix.artsmontreal.org/nos-finalistes/fanfare-pourpour/" target="_blank" rel="noopener noreferrer">
           <StyledImage src="/cam2024/CAM_fanfare_pourpour_publication.png" alt="CAM fanfare pourpour publication" />
-        </StyledImageLink>
+        </StyledImageLink> */}
       </StyledImageContainer>
       <Menu open={open} setOpen={setOpen} id={menuId} />
       <Footer />

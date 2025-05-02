@@ -37,11 +37,11 @@ const PageOne = (props) => {
       <PourPourLogo />
       <Menu open={open} setOpen={setOpen} id={menuId} />
       <Footer />
-      <StyledImageContainer>
+      {/* <StyledImageContainer>
         <a href="https://www.grandprix.artsmontreal.org/nos-finalistes/fanfare-pourpour/" target="_blank" rel="noopener noreferrer">
           <StyledImage src="/cam2024/CAM_fanfare_pourpour_publication.png" alt="CAM fanfare pourpour publication" width={250} height={250} />
         </a>
-      </StyledImageContainer>
+      </StyledImageContainer> */}
     </div>
   );
 };
