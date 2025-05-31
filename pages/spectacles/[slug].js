@@ -32,7 +32,8 @@ const Post = (props) => {
     ville,
     endroit,
   } = {...props}
-  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: userTimeZone };
   const timeOptions = { hour: '2-digit', minute: '2-digit' };
 
   return (
