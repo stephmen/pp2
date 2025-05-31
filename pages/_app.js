@@ -1,27 +1,15 @@
-import React, {useState, useRef} from 'react'
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Header, Footer } from '../components';
-import { GlobalStyles } from '.././global';
+import { GlobalStyles } from '../global';
 import { theme } from '../styles/theme';
-import { useOnClickOutside } from '../hooks'
 
-const  MyApp = ({ Component, pageProps }) => {
-  
-  const [open, setOpen] = useState(false);
-  const node = useRef();
-  const menuId = "main-menu";
-  useOnClickOutside(node, () => setOpen(false));
-  
-  return( 
-    
+const MyApp = ({ Component, pageProps }) => {
+  return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {/* <Header open="open" /> */}
-      <Component {...pageProps } /> 
-      {/* <Footer /> */}
+      <Component {...pageProps} />
     </ThemeProvider>
-   
-    )
-}
+  );
+};
 
-export default MyApp
+export default MyApp;
