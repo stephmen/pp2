@@ -1,7 +1,8 @@
 import React from 'react';
 
 const CalendarItem = ({ publishedAt, endroit }) => {
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: userTimeZone, };
   return (
     <div className="row">
       <div className="date">{new Date(publishedAt).toLocaleDateString('fr-FR', options)}</div>
