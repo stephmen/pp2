@@ -373,6 +373,23 @@ const HistoireBody = styled.div`
 
 
 /* ─────────────────────────────────────────
+   GROUP PHOTO
+───────────────────────────────────────── */
+const GroupPhotoWrap = styled.div`
+  width: 100%;
+  max-height: 75vh;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    filter: brightness(0.88) contrast(1.06);
+  }
+`;
+
+/* ─────────────────────────────────────────
    PRESSE
 ───────────────────────────────────────── */
 const PressGrid = styled.div`
@@ -687,6 +704,11 @@ export default function HomePage({ spectacles = [], histoire = [], presse = [] }
             )}
           </SectionInner>
         </SectionFull>
+
+        {/* ── GROUP PHOTO ──────────────────── */}
+        <GroupPhotoWrap>
+          <img src="/images/30em.jpg" alt="Fanfare PourPour — photo de groupe" loading="lazy" />
+        </GroupPhotoWrap>
 
         {/* ── PRESSE ───────────────────────── */}
         <SectionFull id="presse">
