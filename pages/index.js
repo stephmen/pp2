@@ -371,42 +371,6 @@ const HistoireBody = styled.div`
   strong { color: ${TEXT}; }
 `;
 
-/* ─────────────────────────────────────────
-   BAND MEMBERS
-───────────────────────────────────────── */
-const BandGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 1.5rem;
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-`;
-const BandCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid ${BORDER};
-    filter: grayscale(40%);
-    transition: filter 0.3s, border-color 0.3s;
-    &:hover { filter: grayscale(0%); border-color: ${ACCENT}; }
-  }
-  span {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: ${MUTED};
-    text-align: center;
-  }
-`;
 
 /* ─────────────────────────────────────────
    PRESSE
@@ -546,7 +510,6 @@ const NAV_ITEMS = [
   { href: '#spectacles', label: 'Spectacles' },
   { href: '#albums',     label: 'Albums'     },
   { href: '#histoire',   label: 'Histoire'   },
-  { href: '#musiciens',  label: 'Musiciens'  },
   { href: '#presse',     label: 'Presse'     },
   { href: '#photos',     label: 'Photos'     },
   { href: '#videos',     label: 'Vidéos'     },
@@ -567,19 +530,6 @@ const PHOTOS = [
   '/images/image12.jpg', '/images/image13.jpg', '/images/image14.jpg',
   '/images/image15.jpg', '/images/image16.jpg', '/images/image17.jpg',
   '/images/image18.jpg', '/images/image19.jpg',
-];
-
-const BAND = [
-  { src: '/LesAmisCrop/benoit.png',    name: 'Benoît'    },
-  { src: '/LesAmisCrop/bernard.png',   name: 'Bernard'   },
-  { src: '/LesAmisCrop/christine.png', name: 'Christine' },
-  { src: '/LesAmisCrop/guido.png',     name: 'Guido'     },
-  { src: '/LesAmisCrop/Jack.png',      name: 'Jack'      },
-  { src: '/LesAmisCrop/lou.png',       name: 'Lou'       },
-  { src: '/LesAmisCrop/luc.png',       name: 'Luc'       },
-  { src: '/LesAmisCrop/roy.png',       name: 'Roy'       },
-  { src: '/LesAmisCrop/stephane.png',  name: 'Stéphane'  },
-  { src: '/LesAmisCrop/sue.png',       name: 'Sue'       },
 ];
 
 const VIDEOS = [
@@ -735,23 +685,6 @@ export default function HomePage({ spectacles = [], histoire = [], presse = [] }
                 <BlockContent blocks={histoire[0].body} />
               </HistoireBody>
             )}
-          </SectionInner>
-        </SectionFull>
-
-        {/* ── MUSICIENS ────────────────────── */}
-        <SectionFull id="musiciens" $alt>
-          <SectionInner>
-            <SectionLabel>La bande</SectionLabel>
-            <SectionTitle>Les Musiciens</SectionTitle>
-            <Divider />
-            <BandGrid>
-              {BAND.map(m => (
-                <BandCard key={m.name}>
-                  <img src={m.src} alt={m.name} loading="lazy" />
-                  <span>{m.name}</span>
-                </BandCard>
-              ))}
-            </BandGrid>
           </SectionInner>
         </SectionFull>
 
