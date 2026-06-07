@@ -377,13 +377,9 @@ const HistoireBody = styled.div`
 ───────────────────────────────────────── */
 const GroupPhotoWrap = styled.div`
   width: 100%;
-  max-height: 75vh;
-  overflow: hidden;
   img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
+    height: auto;
     display: block;
     filter: brightness(0.88) contrast(1.06);
   }
