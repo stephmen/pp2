@@ -65,16 +65,16 @@ const PageGlobal = createGlobalStyle`
 
 /* ── FLOATING ICONS ──────────────────────── */
 const ICONS = [
-  { src: '/LesAmisTrans/benoitTrans.png',    left: '2%',  top: '10%', size: 110, dur: 44, delay: 0,  anim: drift1, color: FLASH1 },
-  { src: '/LesAmisTrans/sueTrans.png',       left: '85%', top: '6%',  size: 85,  dur: 52, delay: 7,  anim: drift2, color: FLASH2 },
-  { src: '/LesAmisTrans/royTrans.png',       left: '50%', top: '3%',  size: 95,  dur: 38, delay: 3,  anim: drift3, color: FLASH3 },
-  { src: '/LesAmisTrans/JackTrans.png',      left: '88%', top: '45%', size: 75,  dur: 56, delay: 14, anim: drift1, color: FLASH4 },
-  { src: '/LesAmisTrans/louTrans.png',       left: '1%',  top: '60%', size: 90,  dur: 41, delay: 9,  anim: drift2, color: FLASH2 },
-  { src: '/LesAmisTrans/christineTrans.png', left: '70%', top: '80%', size: 80,  dur: 47, delay: 5,  anim: drift3, color: FLASH1 },
-  { src: '/LesAmisTrans/guidoTrans.png',     left: '20%', top: '88%', size: 70,  dur: 60, delay: 20, anim: drift1, color: FLASH3 },
-  { src: '/LesAmisTrans/lucTrans.png',       left: '92%', top: '72%', size: 65,  dur: 35, delay: 12, anim: drift2, color: FLASH4 },
-  { src: '/LesAmisTrans/bernardTrans.png',   left: '38%', top: '92%', size: 80,  dur: 49, delay: 17, anim: drift3, color: FLASH2 },
-  { src: '/LesAmisTrans/stephaneTrans.png',  left: '60%', top: '55%', size: 72,  dur: 43, delay: 8,  anim: drift1, color: FLASH1 },
+  { src: '/LesAmisTrans/benoitTrans.png',    left: '3%',  top: '28%', size: 110, dur: 44, delay: 0  },
+  { src: '/LesAmisTrans/sueTrans.png',       left: '83%', top: '15%', size: 85,  dur: 52, delay: 7  },
+  { src: '/LesAmisTrans/royTrans.png',       left: '46%', top: '62%', size: 95,  dur: 38, delay: 3  },
+  { src: '/LesAmisTrans/JackTrans.png',      left: '89%', top: '68%', size: 75,  dur: 56, delay: 14 },
+  { src: '/LesAmisTrans/louTrans.png',       left: '2%',  top: '72%', size: 90,  dur: 41, delay: 9  },
+  { src: '/LesAmisTrans/christineTrans.png', left: '68%', top: '42%', size: 80,  dur: 47, delay: 5  },
+  { src: '/LesAmisTrans/guidoTrans.png',     left: '24%', top: '90%', size: 70,  dur: 60, delay: 20 },
+  { src: '/LesAmisTrans/lucTrans.png',       left: '91%', top: '88%', size: 65,  dur: 35, delay: 12 },
+  { src: '/LesAmisTrans/bernardTrans.png',   left: '35%', top: '18%', size: 80,  dur: 49, delay: 17 },
+  { src: '/LesAmisTrans/stephaneTrans.png',  left: '58%', top: '82%', size: 72,  dur: 43, delay: 8  },
 ]
 const FloatLayer = styled.div`
   position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden;
@@ -83,8 +83,7 @@ const FloatIcon = styled.img`
   position: absolute;
   left: ${p => p.$left}; top: ${p => p.$top};
   width: ${p => p.$size}px; height: ${p => p.$size}px;
-  object-fit: contain; opacity: 0.1; will-change: transform, opacity;
-  filter: grayscale(30%) sepia(20%);
+  object-fit: contain; opacity: 0.55; will-change: transform, opacity;
   animation-name: ${p => p.$anim}, ${pulse};
   animation-duration: ${p => p.$dur}s, ${p => p.$dur * 0.6}s;
   animation-timing-function: ease-in-out, ease-in-out;
@@ -229,7 +228,7 @@ const Post = (props) => {
         {ICONS.map((icon, i) => (
           <FloatIcon key={i} src={icon.src} alt=""
             $left={icon.left} $top={icon.top} $size={icon.size}
-            $dur={icon.dur} $delay={icon.delay} $anim={icon.anim} $color={icon.color}
+            $dur={icon.dur} $delay={icon.delay} $anim={drift1}
           />
         ))}
       </FloatLayer>
