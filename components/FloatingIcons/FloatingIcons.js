@@ -117,27 +117,3 @@ export default function FloatingIcons() {
   );
 }
 
-
-export default function FloatingIcons() {
-  return (
-    <>
-      <FloatKeyframes />
-      <Layer aria-hidden="true">
-        {ICONS.map((icon, i) => (
-          <Icon
-            key={i}
-            src={icon.src}
-            alt=""
-            $left={icon.left}
-            $top={icon.top}
-            $size={icon.size}
-            $dur={icon.dur}
-            $delay={icon.delay}
-            $opacity={icon.opacity}
-            $anim={icon.anim}
-          />
-        ))}
-      </Layer>
-    </>
-  );
-}
