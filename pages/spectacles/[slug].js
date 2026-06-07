@@ -86,6 +86,7 @@ const FloatIcon = styled.img`
   left: ${p => p.$left}; top: ${p => p.$top};
   width: ${p => p.$size}px; height: ${p => p.$size}px;
   object-fit: contain; opacity: 0.55; will-change: transform, opacity;
+  filter: invert(1);
   animation-name: ${p => p.$anim}, ${pulse};
   animation-duration: ${p => p.$dur}s, ${p => p.$dur * 0.6}s;
   animation-timing-function: ease-in-out, ease-in-out;
