@@ -64,6 +64,7 @@ const Icon = styled.img`
   height: ${p => p.$size}px;
   object-fit: contain;
   opacity: ${p => p.$opacity};
+  filter: grayscale(20%) sepia(15%);
   animation-name: ${p => p.$anim};
   animation-duration: ${p => p.$dur}s;
   animation-timing-function: ease-in-out;

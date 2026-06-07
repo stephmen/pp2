@@ -7,13 +7,17 @@ import Link from 'next/link'
 import styled, { createGlobalStyle, keyframes } from 'styled-components'
 
 /* ── COLOURS ─────────────────────────────── */
-const BG     = '#07040c'
-const FLASH1 = '#f7e11a'
-const FLASH2 = '#ff3cac'
-const FLASH3 = '#3dffa0'
-const FLASH4 = '#38b6ff'
-const TEXT   = '#f0ebe2'
-const MUTED  = 'rgba(240,235,226,0.5)'
+const BG      = '#07040c'
+const ACCENT  = '#c8213b'   // deep red — the band's colour
+const GOLD    = '#d4a853'   // warm gold for headings
+const TEXT    = '#f0ebe2'
+const MUTED   = 'rgba(240,235,226,0.45)'
+const BORDER  = 'rgba(255,255,255,0.07)'
+// keep these for icon filter refs
+const FLASH1 = ACCENT
+const FLASH2 = GOLD
+const FLASH3 = ACCENT
+const FLASH4 = GOLD
 
 /* ── KEYFRAMES ───────────────────────────── */
 const drift1 = keyframes`
@@ -79,8 +83,8 @@ const FloatIcon = styled.img`
   position: absolute;
   left: ${p => p.$left}; top: ${p => p.$top};
   width: ${p => p.$size}px; height: ${p => p.$size}px;
-  object-fit: contain; opacity: 0.28; will-change: transform, opacity;
-  filter: drop-shadow(0 0 18px ${p => p.$color}) drop-shadow(0 0 6px ${p => p.$color});
+  object-fit: contain; opacity: 0.1; will-change: transform, opacity;
+  filter: grayscale(30%) sepia(20%);
   animation-name: ${p => p.$anim}, ${pulse};
   animation-duration: ${p => p.$dur}s, ${p => p.$dur * 0.6}s;
   animation-timing-function: ease-in-out, ease-in-out;
@@ -119,27 +123,22 @@ const HeroBand = styled.div`
 `
 const EventLabel = styled.div`
   position: relative; font-family: 'Oswald', sans-serif; font-size: 0.65rem;
-  letter-spacing: 0.55em; text-transform: uppercase; color: ${FLASH3}; margin-bottom: 1rem;
-  &::before, &::after { content: '✦'; margin: 0 0.7rem; opacity: 0.6; }
+  letter-spacing: 0.55em; text-transform: uppercase; color: ${ACCENT}; margin-bottom: 1rem;
 `
 const EventTitle = styled.h1`
   position: relative; font-family: 'Oswald', sans-serif;
-  font-size: clamp(2.8rem, 9vw, 7rem); font-weight: 700; line-height: 0.9;
+  font-size: clamp(2.8rem, 9vw, 6.5rem); font-weight: 700; line-height: 0.92;
   text-align: center; text-transform: uppercase; padding: 0 1rem;
-  background: linear-gradient(135deg, ${FLASH1} 0%, ${FLASH2} 45%, ${FLASH4} 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  filter: drop-shadow(0 0 30px rgba(247,225,26,0.3));
+  color: ${TEXT};
 `
 const EventVenue = styled.div`
-  position: relative; margin-top: 1.2rem; font-family: 'Oswald', sans-serif;
-  font-size: clamp(1rem, 3vw, 1.6rem); font-weight: 400; letter-spacing: 0.12em;
-  text-transform: uppercase; color: ${FLASH2}; text-shadow: 0 0 20px rgba(255,60,172,0.5);
+  position: relative; margin-top: 1.4rem; font-family: 'Oswald', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.5rem); font-weight: 300; letter-spacing: 0.18em;
+  text-transform: uppercase; color: ${GOLD};
 `
 const GlitchLine = styled.div`
-  position: relative; z-index: 10; height: 3px;
-  background: linear-gradient(90deg, ${FLASH1}, ${FLASH2}, ${FLASH3}, ${FLASH4}, ${FLASH1});
-  background-size: 300% 100%;
-  animation: ${glitchAnim} 4s ease-in-out infinite, ${gradShift} 3s linear infinite;
+  position: relative; z-index: 10; height: 1px;
+  background: linear-gradient(90deg, transparent, ${ACCENT}, transparent);
 `
 const InfoStrip = styled.div`
   position: relative; z-index: 10; display: flex; flex-wrap: wrap;
@@ -155,7 +154,7 @@ const InfoCell = styled.div`
 `
 const InfoLabel = styled.div`
   font-family: 'Oswald', sans-serif; font-size: 0.6rem;
-  letter-spacing: 0.45em; text-transform: uppercase; color: ${FLASH3}; margin-bottom: 0.5rem;
+  letter-spacing: 0.45em; text-transform: uppercase; color: ${ACCENT}; margin-bottom: 0.5rem;
 `
 const InfoValue = styled.div`
   font-family: 'Oswald', sans-serif; font-size: clamp(0.95rem, 2.5vw, 1.15rem);
@@ -167,14 +166,14 @@ const ContentWrap = styled.div`
 `
 const MainImage = styled.img`
   width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto 3rem;
-  border: 2px solid rgba(255,255,255,0.08);
-  box-shadow: 0 0 60px rgba(247,225,26,0.12), 0 0 120px rgba(255,60,172,0.08);
+  border: 1px solid ${BORDER};
+  box-shadow: 0 8px 60px rgba(0,0,0,0.6);
 `
 const BodyContent = styled.div`
   p, li { font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.9; color: rgba(240,235,226,0.78); margin-bottom: 1.1rem; }
-  a { color: ${FLASH4}; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; &:hover { color: ${FLASH1}; } }
+  a { color: ${GOLD}; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; &:hover { color: ${TEXT}; } }
   strong { color: ${TEXT}; }
-  h2, h3 { font-family: 'Oswald', sans-serif; color: ${FLASH1}; margin: 2rem 0 0.8rem; }
+  h2, h3 { font-family: 'Oswald', sans-serif; color: ${GOLD}; margin: 2rem 0 0.8rem; }
 `
 const FooterMini = styled.footer`
   position: relative; z-index: 10; display: flex; flex-direction: column;
