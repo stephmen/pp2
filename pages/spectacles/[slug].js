@@ -77,7 +77,9 @@ const ICONS = [
   { src: '/LesAmisTrans/stephaneTrans.png',  left: '58%', top: '82%', size: 72,  dur: 43, delay: 8  },
 ]
 const FloatLayer = styled.div`
-  position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden;
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; z-index: 2; overflow: hidden;
 `
 const FloatIcon = styled.img`
   position: absolute;
@@ -224,6 +226,7 @@ const Post = (props) => {
 
       <PageGlobal />
 
+      <div style={{ position: 'relative', overflow: 'hidden' }}>
       <FloatLayer aria-hidden="true">
         {ICONS.map((icon, i) => (
           <FloatIcon key={i} src={icon.src} alt=""
@@ -277,6 +280,7 @@ const Post = (props) => {
         </SocialRow>
         <Copyright>© {new Date().getFullYear()} Fanfare PourPour</Copyright>
       </FooterMini>
+      </div>
     </>
   )
 }

@@ -35,24 +35,39 @@ const FloatKeyframes = createGlobalStyle`
   }
 `;
 
+/* 20 placements spread from top 2% to top 96% of the full page height */
 const ICONS = [
-  { src: '/LesAmisTrans/benoitTrans.png',    left: '4%',  top: '22%', size: 95,  dur: 48, delay: 0,  opacity: 0.55, anim: 'ppFloat1' },
-  { src: '/LesAmisTrans/bernardTrans.png',   left: '87%', top: '8%',  size: 72,  dur: 52, delay: 8,  opacity: 0.50, anim: 'ppFloat2' },
-  { src: '/LesAmisTrans/christineTrans.png', left: '42%', top: '68%', size: 82,  dur: 41, delay: 3,  opacity: 0.52, anim: 'ppFloat3' },
-  { src: '/LesAmisTrans/guidoTrans.png',     left: '91%', top: '52%', size: 68,  dur: 56, delay: 12, opacity: 0.48, anim: 'ppFloat4' },
-  { src: '/LesAmisTrans/JackTrans.png',      left: '18%', top: '55%', size: 88,  dur: 44, delay: 6,  opacity: 0.53, anim: 'ppFloat5' },
-  { src: '/LesAmisTrans/louTrans.png',       left: '65%', top: '18%', size: 78,  dur: 38, delay: 15, opacity: 0.50, anim: 'ppFloat1' },
-  { src: '/LesAmisTrans/lucTrans.png',       left: '6%',  top: '80%', size: 62,  dur: 60, delay: 4,  opacity: 0.46, anim: 'ppFloat2' },
-  { src: '/LesAmisTrans/royTrans.png',       left: '52%', top: '5%',  size: 105, dur: 35, delay: 10, opacity: 0.58, anim: 'ppFloat3' },
-  { src: '/LesAmisTrans/stephaneTrans.png',  left: '30%', top: '85%', size: 74,  dur: 50, delay: 7,  opacity: 0.50, anim: 'ppFloat4' },
-  { src: '/LesAmisTrans/sueTrans.png',       left: '75%', top: '75%', size: 84,  dur: 43, delay: 18, opacity: 0.54, anim: 'ppFloat5' },
+  { src: '/LesAmisTrans/royTrans.png',       left: '5%',  top: '2%',  size: 120, dur: 44, delay: 0,  opacity: 0.60, anim: 'ppFloat3' },
+  { src: '/LesAmisTrans/sueTrans.png',       left: '82%', top: '4%',  size: 90,  dur: 38, delay: 5,  opacity: 0.55, anim: 'ppFloat1' },
+  { src: '/LesAmisTrans/benoitTrans.png',    left: '2%',  top: '10%', size: 100, dur: 52, delay: 3,  opacity: 0.58, anim: 'ppFloat2' },
+  { src: '/LesAmisTrans/JackTrans.png',      left: '88%', top: '14%', size: 80,  dur: 47, delay: 11, opacity: 0.52, anim: 'ppFloat4' },
+  { src: '/LesAmisTrans/louTrans.png',       left: '45%', top: '18%', size: 95,  dur: 41, delay: 7,  opacity: 0.56, anim: 'ppFloat5' },
+  { src: '/LesAmisTrans/christineTrans.png', left: '70%', top: '24%', size: 85,  dur: 55, delay: 14, opacity: 0.53, anim: 'ppFloat1' },
+  { src: '/LesAmisTrans/guidoTrans.png',     left: '10%', top: '30%', size: 75,  dur: 36, delay: 2,  opacity: 0.50, anim: 'ppFloat3' },
+  { src: '/LesAmisTrans/lucTrans.png',       left: '91%', top: '36%', size: 88,  dur: 49, delay: 18, opacity: 0.55, anim: 'ppFloat2' },
+  { src: '/LesAmisTrans/bernardTrans.png',   left: '28%', top: '40%', size: 105, dur: 43, delay: 6,  opacity: 0.60, anim: 'ppFloat4' },
+  { src: '/LesAmisTrans/stephaneTrans.png',  left: '62%', top: '46%', size: 78,  dur: 58, delay: 9,  opacity: 0.52, anim: 'ppFloat5' },
+  { src: '/LesAmisTrans/sueTrans.png',       left: '4%',  top: '52%', size: 92,  dur: 40, delay: 16, opacity: 0.57, anim: 'ppFloat1' },
+  { src: '/LesAmisTrans/royTrans.png',       left: '85%', top: '56%', size: 82,  dur: 46, delay: 4,  opacity: 0.53, anim: 'ppFloat3' },
+  { src: '/LesAmisTrans/JackTrans.png',      left: '38%', top: '62%', size: 110, dur: 35, delay: 12, opacity: 0.62, anim: 'ppFloat2' },
+  { src: '/LesAmisTrans/louTrans.png',       left: '75%', top: '68%', size: 72,  dur: 53, delay: 8,  opacity: 0.50, anim: 'ppFloat4' },
+  { src: '/LesAmisTrans/benoitTrans.png',    left: '14%', top: '72%', size: 96,  dur: 39, delay: 20, opacity: 0.56, anim: 'ppFloat5' },
+  { src: '/LesAmisTrans/christineTrans.png', left: '55%', top: '78%', size: 84,  dur: 57, delay: 1,  opacity: 0.54, anim: 'ppFloat1' },
+  { src: '/LesAmisTrans/guidoTrans.png',     left: '88%', top: '82%', size: 76,  dur: 42, delay: 15, opacity: 0.51, anim: 'ppFloat3' },
+  { src: '/LesAmisTrans/lucTrans.png',       left: '22%', top: '87%', size: 100, dur: 48, delay: 10, opacity: 0.58, anim: 'ppFloat2' },
+  { src: '/LesAmisTrans/bernardTrans.png',   left: '68%', top: '91%', size: 88,  dur: 34, delay: 6,  opacity: 0.55, anim: 'ppFloat4' },
+  { src: '/LesAmisTrans/stephaneTrans.png',  left: '8%',  top: '95%', size: 95,  dur: 50, delay: 13, opacity: 0.57, anim: 'ppFloat5' },
 ];
 
+/* position: absolute so icons spread across the full scrollable page height */
 const Layer = styled.div`
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
 `;
 
@@ -74,9 +89,34 @@ const Icon = styled.img`
   @media (max-width: 768px) {
     width: ${p => Math.round(p.$size * 0.55)}px;
     height: ${p => Math.round(p.$size * 0.55)}px;
-    opacity: ${p => p.$opacity * 0.6};
+    opacity: ${p => p.$opacity * 0.7};
   }
 `;
+
+export default function FloatingIcons() {
+  return (
+    <>
+      <FloatKeyframes />
+      <Layer aria-hidden="true">
+        {ICONS.map((icon, i) => (
+          <Icon
+            key={i}
+            src={icon.src}
+            alt=""
+            $left={icon.left}
+            $top={icon.top}
+            $size={icon.size}
+            $dur={icon.dur}
+            $delay={icon.delay}
+            $opacity={icon.opacity}
+            $anim={icon.anim}
+          />
+        ))}
+      </Layer>
+    </>
+  );
+}
+
 
 export default function FloatingIcons() {
   return (
